@@ -11,7 +11,7 @@ const bleStateContainer = document.getElementById('bleState');
 
 // BLE Service and Characteristic UUIDs
 const bleServiceUUID = '19b10000-e8f2-537e-4f6c-d104768a1214';
-const combinedSensorCharacteristicUUID = '19b10001-e8f2-537e-4f6c-d104768a1214';
+const combinedSensorCharacteristicUUID = '19b10005-e8f2-537e-4f6c-d104768a1214';
 const batteryCharacteristicUUID = '19b10004-e8f2-537e-4f6c-d104768a1214';
 const buzzerCharacteristicUUID = '19b10003-e8f2-537e-4f6c-d104768a1214';
 const coCharacteristicUUID = '6e400002-b5a3-f393-e0a9-e50e24dcca9e';
