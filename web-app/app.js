@@ -125,8 +125,10 @@ function handleCOLevel(event) {
 
 // Handle Battery Level
 function handleBatteryLevel(event) {
-    let batteryValue = new TextDecoder().decode(event.target.value);
-    batteryLevelContainer.textContent = batteryValue + ' V';
+    let batteryVoltage = parseFloat(new TextDecoder().decode(event.target.value));
+    let batteryPercent = ((batteryVoltage - 2.8) / 2.7) * 100;
+    batteryLevelContainer.textContent = 'Battery: ' + batteryPercent.toFixed(2) + '%';
 }
+
 
 
