@@ -1,0 +1,1807 @@
+433815658906118
+Ahsan Libs
+1.2mm_Daughterboard_0781710004
+
+
+0
+6
+6
+Ahsan Libs
+1U-Hotswap-Solder_Nosilk
+
+
+0
+4
+3
+Ahsan Libs
+1U-Hotswap-Solder_Nosilk_rev
+
+
+0
+4
+3
+Ahsan Libs
+1X01_CASTEL
+
+
+0
+2
+1
+Ahsan Libs
+1u-Inswitch-hotswap
+
+
+0
+6
+5
+Ahsan Libs
+1x01
+Through hole straight pin header, 1x01, 2.54mm pitch, single row
+Through hole pin header THT 1x01 2.54mm single row
+0
+1
+1
+Ahsan Libs
+1x01-1x3mmPAD
+4-bit rotary coded switch, J-hook, https://www.nidec-copal-electronics.com/e/catalog/switch/sh-7000.pdf
+rotary switch bcd
+0
+1
+1
+Ahsan Libs
+2N3904SRTKPS
+SOT-23
+Transistor
+0
+3
+3
+Ahsan Libs
+2x2_SMD_Conn
+SMD 5x-dip-switch SPST , Slide, row spacing 6.73 mm (264 mils), body size 6.7x14.26mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile, JPin
+SMD DIP Switch SPST Slide 6.73mm 264mil SMD LowProfile JPin
+0
+1
+1
+Ahsan Libs
+2x5_SMD_Conn
+SMD 5x-dip-switch SPST , Slide, row spacing 6.73 mm (264 mils), body size 6.7x14.26mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile, JPin
+SMD DIP Switch SPST Slide 6.73mm 264mil SMD LowProfile JPin
+0
+1
+1
+Ahsan Libs
+3.5mm_pad
+
+
+0
+1
+1
+Ahsan Libs
+3PDT Footswitch
+<b> Latching Footswitch, Solder Lugs</b>{return}<br><a href="http://smallbear-electronics.mybigcommerce.com/cic-blue-3pdt/">http://smallbear-electronics.mybigcommerce.com/cic-blue-3pdt/</a>{return}<p>{return}<b>Momentary Footswitch, Solder Lugs</b>{return}<br><a href="http://smallbear-electronics.mybigcommerce.com/cic-blue-3pdt-momentary/">http://smallbear-electronics.mybigcommerce.com/cic-blue-3pdt-momentary/</a>
+
+0
+9
+9
+Ahsan Libs
+14p_1x10
+Through hole straight Samtec HPM power header series 11.94mm post length, 1x14, 5.08mm pitch, single row
+Through hole Samtec HPM power header series 11.94mm post length THT 1x14 5.08mm single row
+0
+14
+14
+Ahsan Libs
+25mm_LekkerSwitch_1u_SMD
+Void Switch 1U Layout Template
+Void Switch Hall Effect keyswitch 1.00u 1U
+0
+0
+0
+Ahsan Libs
+74LVC125APW
+SOT402-1
+Integrated Circuit
+0
+14
+14
+Ahsan Libs
+9774035243R
+SMT steel spacer, M2 internal thread
+
+0
+2
+1
+Ahsan Libs
+ATMEGA32U4-AU
+
+
+0
+44
+44
+Ahsan Libs
+ATMEGA32U4-MURr
+QFN 44
+Integrated Circuit
+0
+45
+45
+Ahsan Libs
+Alps_SKRK
+http://www.alps.com/prod/info/E/HTML/Tact/SurfaceMount/SKRK/SKRKAHE020.html
+SMD SMT button
+0
+2
+2
+Ahsan Libs
+Alps_SKRK_Reset
+http://www.alps.com/prod/info/E/HTML/Tact/SurfaceMount/SKRK/SKRKAHE020.html
+SMD SMT button
+0
+2
+2
+Ahsan Libs
+Arduino_Nano_Silkscreen
+Arduino Nano, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf
+Arduino Nano
+0
+0
+0
+Ahsan Libs
+BME680-LGA-8_L3.0-W3.0-P0.80-TR
+
+
+0
+8
+8
+Ahsan Libs
+BUZZER PIEZO SMT-1141-T-5-R
+
+
+0
+2
+2
+Ahsan Libs
+CAP-SMD_BD5.0-L5.3-W5.3-LS6.3-FD
+
+
+0
+2
+2
+Ahsan Libs
+CAPMP7.6X4.3_4.3N_KEM
+
+T491X107K025AT 
+0
+2
+2
+Ahsan Libs
+CO Sensor
+
+
+0
+6
+6
+Ahsan Libs
+CONN-SMD_JST1.25mm
+
+
+0
+4
+4
+Ahsan Libs
+CONN_BM04B-ACHSS-A-GAN-TFLFSN_JST
+
+BM04B-ACHSS-A-GAN-TFLFSN 
+0
+6
+6
+Ahsan Libs
+CON_FH33J-4S-0.5SH
+
+
+0
+6
+5
+Ahsan Libs
+CON_FH33J-12S-0.5SH
+
+
+0
+14
+13
+Ahsan Libs
+CON_JST_ACH_BM02B
+JST ACH series connector, BM02B-ACHSS-GAN-ETF (http://www.jst-mfg.com/product/pdf/eng/eACH.pdf), generated with kicad-footprint-generator
+connector JST ACH vertical
+0
+4
+3
+Ahsan Libs
+CON_TC2030_outlined
+Tag-Connect programming header; http://www.tag-connect.com/Materials/TC2030-IDC-NL.pdf
+tag connect programming header pogo pins
+0
+6
+6
+Ahsan Libs
+CP_EIA-3528-12_Kemet-T
+Tantalum Capacitor SMD Kemet-T (3528-12 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+Ahsan Libs
+CP_Radial_D6mm_P3mm
+CP, Radial series, Radial, pin pitch=2.50mm, , diameter=6.3mm, Electrolytic Capacitor
+CP Radial series Radial pin pitch 2.50mm  diameter 6.3mm Electrolytic Capacitor
+0
+2
+2
+Ahsan Libs
+CRONE-SK6812MINI-E
+
+
+0
+4
+4
+Ahsan Libs
+CRYSTAL-SMD_L5.0-W3.2_12Mhz
+
+
+0
+2
+2
+Ahsan Libs
+C_3mm
+C, Rect series, Radial, pin pitch=2.50mm, , length*width=4.6*2mm^2, Capacitor, http://www.wima.de/DE/WIMA_MKS_02.pdf
+C Rect series Radial pin pitch 2.50mm  length 4.6mm width 2mm Capacitor
+0
+2
+2
+Ahsan Libs
+C_0402_1005Metric
+Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
+capacitor
+0
+2
+2
+Ahsan Libs
+C_0603_1608Metric
+Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
+capacitor
+0
+2
+2
+Ahsan Libs
+C_0805_2012Metric
+Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator
+capacitor
+0
+2
+2
+Ahsan Libs
+C_Disc_D6.0mm_W2.5mm_P5.00mm
+C, Disc series, Radial, pin pitch=5.00mm, , diameter*width=6*2.5mm^2, Capacitor, http://cdn-reichelt.de/documents/datenblatt/B300/DS_KERKO_TC.pdf
+C Disc series Radial pin pitch 5.00mm  diameter 6mm width 2.5mm Capacitor
+0
+2
+2
+Ahsan Libs
+Capacitive sensor 1x04 2.54mm
+Through hole straight pin header, 1x04, 2.54mm pitch, single row
+Through hole pin header THT 1x04 2.54mm single row
+0
+4
+4
+Ahsan Libs
+CherryMX_1.250u_PCB_KailhSocket-solder
+Cherry MX switch footprint. Size: 1.50u, Mount type: PCB, Using Kailh Socket: yes, Stabilizer: n/a, Lighting: 2 pin LED
+CherryMX 1.50u PCB KailhSocket LED
+0
+4
+2
+Ahsan Libs
+CherryMX_6.25u_hotswap_solder_flip
+Cherry MX switch footprint. Size: 6.25u, Mount type: PCB, Using Kailh Socket: yes, Stabilizer: PCB mounted (Wire Top), Lighting: 2 pin LED
+CherryMX 6.25u PCB KailhSocket StabWireTop LED
+0
+4
+2
+Ahsan Libs
+Choc_Hotswap_1u
+
+
+0
+2
+2
+Ahsan Libs
+Crystal_SMD_3215-2Pin_3.2x1.5mm
+SMD Crystal FC-135 https://support.epson.biz/td/api/doc_check.php?dl=brief_FC-135R_en.pdf
+SMD SMT Crystal
+0
+2
+2
+Ahsan Libs
+Crystal_SMD_3225-4Pin_3.2x2.5mm
+SMD Crystal SERIES SMD3225/4 http://www.txccrystal.com/images/pdf/7m-accuracy.pdf, 3.2x2.5mm^2 package
+SMD SMT crystal
+0
+4
+4
+Ahsan Libs
+DIODE_GB01SLT12-214
+
+GB01SLT12-214 
+0
+2
+2
+Ahsan Libs
+DMN5L06VAK-7
+SOT563
+MOSFET (N-Channel)
+0
+6
+6
+Ahsan Libs
+DPDT Swicth Toggle
+
+
+0
+6
+6
+Ahsan Libs
+DTSM21YVTR
+DTSM-21Y-V-T/R-2
+Switch
+0
+4
+4
+Ahsan Libs
+D_1206_handsolder_reversible
+Diode SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator
+diode handsolder
+0
+6
+2
+Ahsan Libs
+D_DO-35_5mm
+Diode, DO-35_SOD27 series, Axial, Horizontal, pin pitch=7.62mm, , length*diameter=4*2mm^2, , http://www.diodes.com/_files/packages/DO-35.pdf
+Diode DO-35_SOD27 series Axial Horizontal pin pitch 7.62mm  length 4mm diameter 2mm
+0
+2
+2
+Ahsan Libs
+D_DO-41_SOD81_P8.7mm_Horizontal
+Diode, DO-41_SOD81 series, Axial, Horizontal, pin pitch=7.62mm, , length*diameter=5.2*2.7mm^2, , http://www.diodes.com/_files/packages/DO-41%20(Plastic).pdf
+Diode DO-41_SOD81 series Axial Horizontal pin pitch 7.62mm  length 5.2mm diameter 2.7mm
+0
+2
+2
+Ahsan Libs
+D_SOD-123
+SOD-123
+SOD-123
+0
+2
+2
+Ahsan Libs
+D_SOD-123_Kbd
+SOD-123
+SOD-123
+0
+2
+2
+Ahsan Libs
+D_SOD-123_front
+SOD-123
+SOD-123
+0
+2
+2
+Ahsan Libs
+D_SOD-523
+http://www.diodes.com/datasheets/ap02001.pdf p.144
+Diode SOD523
+0
+2
+2
+Ahsan Libs
+Dilemma-SK6812MINI-E
+
+
+0
+6
+4
+Ahsan Libs
+Dome Switch 7x7-5133TR
+
+5133TR 
+0
+5
+5
+Ahsan Libs
+Dome Switch 7x7mm 5135TR
+
+5135TR 
+0
+5
+5
+Ahsan Libs
+DomeTactile Switch 5175TR
+
+5175TR 
+0
+5
+5
+Ahsan Libs
+ESD_SOT-23-6
+6-pin SOT-23 package
+SOT-23-6
+0
+6
+6
+Ahsan Libs
+ESP32-CAM
+<b>ESP32-CAM-2</b><br>
+
+0
+16
+16
+Ahsan Libs
+ESP32-DEVKITC-32
+
+
+0
+38
+38
+Ahsan Libs
+ESP32-S2-MINI-1-N4
+
+ESP32-S2-MINI-1-N4 
+0
+73
+73
+Ahsan Libs
+ESP32-S2-MINI-1U-N4
+
+ESP32-S2-MINI-1U-N4 
+0
+73
+73
+Ahsan Libs
+ESP32-S2-SMD
+QFN56 (7×7 mm) Package
+Integrated Circuit
+0
+57
+57
+Ahsan Libs
+ESP32-S2-WROOM
+
+
+0
+51
+43
+Ahsan Libs
+ESP32-S3-MINI-1-N8
+
+ESP32-S3-MINI-1-N8 
+0
+73
+73
+Ahsan Libs
+EXBV8V_PAN
+
+EXB-V8V220JV 
+0
+8
+8
+Ahsan Libs
+Female Magnetic 5pin
+Through hole straight pin header, 1x05, 2.54mm pitch, single row
+Through hole pin header THT 1x05 2.54mm single row
+0
+5
+5
+Ahsan Libs
+Female_Magnetic_1x04_2.54mm
+Through hole straight pin header, 1x04, 2.54mm pitch, single row
+Through hole pin header THT 1x04 2.54mm single row
+0
+4
+4
+Ahsan Libs
+Fuseholder_Blade_Mini_Keystone_3568
+fuse holder, car blade fuse mini, http://www.keyelco.com/product-pdf.cfm?p=306
+car blade fuse mini
+0
+4
+2
+Ahsan Libs
+HDR-M-2.54_2X3
+
+
+0
+6
+6
+Ahsan Libs
+HF46F
+HF46F
+Relay or Contactor
+0
+4
+4
+Ahsan Libs
+HOLE-0.5mm
+Mounting Hole 2.2mm, no annular, M2
+mounting hole 2.2mm no annular m2
+0
+0
+0
+Ahsan Libs
+HOLE-3mm
+Mounting Hole 2.2mm, no annular, M2
+mounting hole 2.2mm no annular m2
+0
+0
+0
+Ahsan Libs
+HOLE-9mm
+Mounting Hole 2.2mm, no annular, M2
+mounting hole 2.2mm no annular m2
+0
+0
+0
+Ahsan Libs
+Hirose _U.FL-R-SMT(10)
+U.FL Series 50 Ohm Receptacle Male Pins Ultra Small SMT Coaxial Connector
+
+0
+3
+3
+Ahsan Libs
+Hole 2.2mm
+Mounting Hole 2.2mm, no annular, M2, DIN965
+mounting hole 2.2mm no annular m2 din965
+0
+0
+0
+Ahsan Libs
+IDC-Header_2x03_P2.54mm_Vertical
+Through hole IDC box header, 2x03, 2.54mm pitch, DIN 41651 / IEC 60603-13, double rows, https://docs.google.com/spreadsheets/d/16SsEcesNF15N3Lb4niX7dcUr-NY5_MFPQhobNuNppn4/edit#gid=0
+Through hole vertical IDC box header THT 2x03 2.54mm double row
+0
+6
+6
+Ahsan Libs
+IDC-Header_2x08_P2.54mm_Vertical
+Through hole IDC box header, 2x08, 2.54mm pitch, DIN 41651 / IEC 60603-13, double rows, https://docs.google.com/spreadsheets/d/16SsEcesNF15N3Lb4niX7dcUr-NY5_MFPQhobNuNppn4/edit#gid=0
+Through hole vertical IDC box header THT 2x08 2.54mm double row
+0
+16
+16
+Ahsan Libs
+JRC4558D
+
+
+0
+8
+8
+Ahsan Libs
+JST-4P
+A1002WR-S-4P-2
+Connector
+0
+6
+6
+Ahsan Libs
+JST_B4B-XH-A(LF)(SN)
+
+
+0
+4
+4
+Ahsan Libs
+JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal
+JST SH series connector, SM04B-SRSS-TB (http://www.jst-mfg.com/product/pdf/eng/eSH.pdf), generated with kicad-footprint-generator
+connector JST SH top entry
+0
+6
+5
+Ahsan Libs
+JST_SUR_SM04B-SURS-TF_1x04-1MP_P0.80mm_Horizontal
+JST SUR series connector, SM04B-SURS-TF (http://www.jst-mfg.com/product/pdf/eng/eSUR.pdf), generated with kicad-footprint-generator
+connector JST SUR top entry
+0
+6
+5
+Ahsan Libs
+K2-1187SQ-A4SW-06
+ALPS 5.2mm Square Low-profile Type (Surface Mount) SKQG Series, Without stem, http://www.alps.com/prod/info/E/HTML/Tact/SurfaceMount/SKQG/SKQGAEE010.html
+SPST Button Switch
+0
+4
+2
+Ahsan Libs
+LED-5730-W
+LED,Yuji,5730,https://cdn.shopify.com/s/files/1/0344/6401/files/YJWJ014-1.1_YJ-BC-5730L-G02.pdf
+LED Yuji 5730
+0
+3
+2
+Ahsan Libs
+LED_0603_1608Metric
+LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator
+LED
+0
+2
+2
+Ahsan Libs
+LED_1206_3216Metric
+LED SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator
+LED
+0
+2
+2
+Ahsan Libs
+LED_PLCC_2835
+https://www.luckylight.cn/media/component/data-sheet/R2835BC-B2M-M10.pdf
+LED
+0
+2
+2
+Ahsan Libs
+LED_SK6805-EC15
+https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf
+LED RGB NeoPixel
+0
+10
+4
+Ahsan Libs
+LED_WS2812B-Mini_3.5x3.5mm
+https://e-neon.ru/catalog_files/pdf2/ws2812b-mini(3535)%20datasheet-v1.0.pdf
+RGB LED with integrated controller, 3535 package
+0
+4
+4
+Ahsan Libs
+LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm
+https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf
+LED RGB NeoPixel
+0
+4
+4
+Ahsan Libs
+LM7805
+KTT0003B
+Integrated Circuit
+0
+6
+6
+Ahsan Libs
+Left_Rp2040_Conn2.54mm
+Through hole straight pin header, 1x12, 2.54mm pitch, single row
+Through hole pin header THT 1x12 2.54mm single row
+0
+12
+12
+Ahsan Libs
+LekkerSwitch_1u_SMD
+Void Switch 1U Layout Template
+Void Switch Hall Effect keyswitch 1.00u 1U
+0
+0
+0
+Ahsan Libs
+LevelShifter_BOB-12009
+
+
+0
+12
+12
+Ahsan Libs
+MAX31856MUD_T
+
+
+0
+14
+14
+Ahsan Libs
+ME6 INDUCTOR
+Through hole straight pin header, 1x01, 2.54mm pitch, single row
+Through hole pin header THT 1x01 2.54mm single row
+0
+12
+2
+Ahsan Libs
+MINI560
+
+
+0
+8
+8
+Ahsan Libs
+MJ-4PP-9_1side
+
+
+0
+4
+4
+Ahsan Libs
+MKI2C-3V
+
+
+0
+12
+4
+Ahsan Libs
+MOC3021S
+
+MOC3021S 
+0
+6
+6
+Ahsan Libs
+MPM3550EGLE
+
+MPM3550EGLE 
+0
+18
+18
+Ahsan Libs
+MPU-6500
+
+MPU-6500 
+0
+25
+25
+Ahsan Libs
+MTR_MMBT2222A-TP_MCE
+
+MMBT2222A-TP 
+0
+3
+3
+Ahsan Libs
+MTR_MMBT2222A-TP_MCE-L
+
+MMBT2222A-TP 
+0
+3
+3
+Ahsan Libs
+MTR_MMBT2222A-TP_MCE-M
+
+MMBT2222A-TP 
+0
+3
+3
+Ahsan Libs
+MX-1.5U-NoLED-solder
+
+
+0
+4
+2
+Ahsan Libs
+MX-1.75U-NoLED-Solder
+
+
+0
+4
+2
+Ahsan Libs
+MX-1U
+
+
+0
+4
+4
+Ahsan Libs
+MX-1U-FLIPPED
+
+
+0
+6
+4
+Ahsan Libs
+MX-1U-NoLED
+
+
+0
+4
+2
+Ahsan Libs
+MX-1U-NoLED-Silkscreen
+
+
+0
+2
+2
+Ahsan Libs
+MX-1U-led
+
+
+0
+4
+4
+Ahsan Libs
+MX-1U-led-nosilk
+
+
+0
+4
+4
+Ahsan Libs
+MXOnly-1.5U-NoLED
+
+
+0
+2
+2
+Ahsan Libs
+MXOnly-1.75U-NoLED
+
+
+0
+2
+2
+Ahsan Libs
+MXOnly-1U-Hotswap-Solder
+
+
+0
+4
+2
+Ahsan Libs
+MXOnly-1U-NoLED
+
+
+0
+2
+2
+Ahsan Libs
+MXOnly-2.25U-NoLED
+
+
+0
+2
+2
+Ahsan Libs
+MXOnly-2.75U-Hotswap-ReversedStabilizers-solder
+
+
+0
+4
+2
+Ahsan Libs
+MXOnly-2U-Hotswap+normal-custom
+
+
+0
+4
+2
+Ahsan Libs
+MXOnly-7U-NoLED
+
+
+0
+2
+2
+Ahsan Libs
+MXOnly-ISO-Hotswap-solder
+
+
+0
+4
+2
+Ahsan Libs
+Magnetic Female 3pin
+Through hole straight pin header, 1x03, 2.54mm pitch, single row
+Through hole pin header THT 1x03 2.54mm single row
+0
+3
+3
+Ahsan Libs
+Magnetic Male 3pin
+Through hole straight pin header, 1x03, 2.54mm pitch, single row
+Through hole pin header THT 1x03 2.54mm single row
+0
+3
+3
+Ahsan Libs
+Magnetic_1x04_2.54mm
+Through hole straight pin header, 1x04, 2.54mm pitch, single row
+Through hole pin header THT 1x04 2.54mm single row
+0
+4
+4
+Ahsan Libs
+Male Magnetic 5pin
+Through hole straight pin header, 1x05, 2.54mm pitch, single row
+Through hole pin header THT 1x05 2.54mm single row
+0
+5
+5
+Ahsan Libs
+Male_Magnetic_1x04_2.54mm
+Through hole straight pin header, 1x04, 2.54mm pitch, single row
+Through hole pin header THT 1x04 2.54mm single row
+0
+4
+4
+Ahsan Libs
+Micro-B SMD USB Connector
+
+
+0
+9
+9
+Ahsan Libs
+MicroSD_TF-SMD_TF-PUSH
+
+
+0
+13
+10
+Ahsan Libs
+MountingHole_2.2mm_M2
+Mounting Hole 2.2mm, no annular, M2
+mounting hole 2.2mm no annular m2
+0
+0
+0
+Ahsan Libs
+MountingHole_2.5mm_Pad
+Mounting Hole 2.5mm
+mounting hole 2.5mm
+0
+1
+1
+Ahsan Libs
+MountingHole_3.2mm_M3_DIN965_Pad
+Mounting Hole 3.2mm, M3, DIN965
+mounting hole 3.2mm m3 din965
+0
+1
+1
+Ahsan Libs
+MountingHole_3.3mm
+Mounting Hole 3.2mm, no annular, M3
+mounting hole 3.2mm no annular m3
+0
+0
+0
+Ahsan Libs
+MountingHole_3.7mm_M3
+Mounting Hole 2.2mm, no annular, M2
+mounting hole 2.2mm no annular m2
+0
+0
+0
+Ahsan Libs
+MountingHole_3mm
+Mounting Hole 3.2mm, no annular, M3
+mounting hole 3.2mm no annular m3
+0
+0
+0
+Ahsan Libs
+MountingHole_4.5mm
+Mounting Hole 4.5mm, no annular
+mounting hole 4.5mm no annular
+0
+0
+0
+Ahsan Libs
+MountingHole_6mm_Pad
+Mounting Hole 3mm
+mounting hole 3mm
+0
+1
+1
+Ahsan Libs
+NTR4170NT1G
+
+NTR4170NT1G 
+0
+3
+3
+Ahsan Libs
+NX3L4053PW,118
+
+
+0
+16
+16
+Ahsan Libs
+North_Choc_Hotswap_1u_LeftRight
+
+
+0
+4
+2
+Ahsan Libs
+OLED-MKI2C
+Through hole straight pin header, 1x04, 2.54mm pitch, single row
+Through hole pin header THT 1x04 2.54mm single row
+0
+14
+4
+Ahsan Libs
+OPA2990IDSGr
+WSON  DSG0008A
+Integrated Circuit
+0
+9
+9
+Ahsan Libs
+PG1353 Low Profile Hotswap
+Kailh Choc keyswitch CPG1350 V1 CPG1353 V2 Hotswap with 1.00u keycap
+Kailh Choc Keyswitch Switch CPG1350 V1 CPG1353 V2 Hotswap Cutout 1.00u
+0
+2
+2
+Ahsan Libs
+PIC16F15345-IGZ-UQFN20 (1)
+
+PIC16F15345-I/GZ 
+0
+21
+21
+Ahsan Libs
+PIC16F15345-IGZ-UQFN20 (2)
+
+PIC16F15345-I/GZ 
+0
+21
+21
+Ahsan Libs
+PIC16F15345-IGZ-UQFN20 (3)
+
+PIC16F15345-I/GZ 
+0
+21
+21
+Ahsan Libs
+PJ-320A
+
+
+0
+4
+4
+Ahsan Libs
+PRTR5V0U2X
+SOT143B
+Diode
+0
+4
+4
+Ahsan Libs
+PRTR5V0U2X_Close
+SOT143B
+Diode
+0
+4
+4
+Ahsan Libs
+PhoenixContact_MCV_1,5_2-G-5.08_1x02_P5.08mm_Vertical
+Generic Phoenix Contact connector footprint for: MCV_1,5/2-G-5.08; number of pins: 02; pin pitch: 5.08mm; Vertical || order number: 1836299 8A 320V
+phoenix_contact connector MCV_01x02_G_5.08mm
+0
+2
+2
+Ahsan Libs
+PhoenixContact_MCV_1,5_3-G-5.08_1x03_P5.08mm_Vertical
+Generic Phoenix Contact connector footprint for: MCV_1,5/3-G-5.08; number of pins: 03; pin pitch: 5.08mm; Vertical || order number: 1836309 8A 320V
+phoenix_contact connector MCV_01x03_G_5.08mm
+0
+3
+3
+Ahsan Libs
+PinHeader_1x02_P2.54mm_Vertical
+Through hole straight pin header, 1x02, 2.54mm pitch, single row
+Through hole pin header THT 1x02 2.54mm single row
+0
+2
+2
+Ahsan Libs
+PinHeader_1x06_P2.54mm_Vertical
+Through hole straight pin header, 1x06, 2.54mm pitch, single row
+Through hole pin header THT 1x06 2.54mm single row
+0
+6
+6
+Ahsan Libs
+Potentiometer_B10k
+Potentiometer, vertical, Bourns 3296W, https://www.bourns.com/pdfs/3296.pdf
+Potentiometer vertical Bourns 3296W
+0
+3
+3
+Ahsan Libs
+Potentiometer_TH
+Potentiometer, vertical, Bourns 3296W, https://www.bourns.com/pdfs/3296.pdf
+Potentiometer vertical Bourns 3296W
+0
+3
+3
+Ahsan Libs
+ProMicro
+Pro Micro footprint
+promicro ProMicro
+0
+24
+24
+Ahsan Libs
+ProMicro-EnforcedTop
+Pro Micro footprint
+promicro ProMicro
+0
+24
+24
+Ahsan Libs
+ProMicro-NoSilk
+Pro Micro footprint
+promicro ProMicro
+0
+24
+24
+Ahsan Libs
+ProMicro_v3
+
+
+0
+24
+24
+Ahsan Libs
+RELAYS-TH_HF46F-G-XX-HS1-XXX
+
+
+0
+4
+4
+Ahsan Libs
+RELAY_G6B-1114P-US
+
+G6B-1114P-US DC5 
+0
+4
+4
+Ahsan Libs
+RELAY_SRD-05VDC-SL-C
+
+
+0
+5
+5
+Ahsan Libs
+RP2040-QFN-56
+QFN, 56 Pin (http://www.cypress.com/file/416486/download#page=40), generated with kicad-footprint-generator ipc_dfn_qfn_generator.py
+QFN DFN_QFN
+0
+70
+57
+Ahsan Libs
+RP2040-Zero
+
+
+0
+23
+23
+Ahsan Libs
+RT8299AZSP
+
+RT8299AZSP 
+0
+9
+9
+Ahsan Libs
+R_8mm
+Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=7.62mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf
+Resistor Axial_DIN0204 series Axial Horizontal pin pitch 7.62mm 0.167W length 3.6mm diameter 1.6mm
+0
+2
+2
+Ahsan Libs
+R_0402_1005Metric
+Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
+resistor
+0
+2
+2
+Ahsan Libs
+R_0603_1608Metric
+Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
+resistor
+0
+2
+2
+Ahsan Libs
+R_0805_2012Metric
+Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
+resistor
+0
+2
+2
+Ahsan Libs
+R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal
+Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=7.62mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf
+Resistor Axial_DIN0204 series Axial Horizontal pin pitch 7.62mm 0.167W length 3.6mm diameter 1.6mm
+0
+2
+2
+Ahsan Libs
+Raytac_MDBT50Q
+Multiprotocol radio SoC module https://www.raytac.com/download/index.php?index_id=43
+wireless 2.4 GHz Bluetooth ble zigbee 802.15.4 thread nordic raytac nrf52840 nrf52833
+0
+61
+61
+Ahsan Libs
+Relay-SRD-12VDC-SL-C
+SRD
+Relay or Contactor
+0
+5
+5
+Ahsan Libs
+Reversible-USBA
+USB type A Plug, Horizontal, http://cnctech.us/pdfs/1001-011-01101.pdf
+USB-A
+0
+6
+5
+Ahsan Libs
+Right_Rp2040_Conn2.54mm
+Through hole straight pin header, 1x12, 2.54mm pitch, single row
+Through hole pin header THT 1x12 2.54mm single row
+0
+12
+12
+Ahsan Libs
+RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm_roundholes
+Alps rotary encoder, EC12E... with switch, vertical shaft, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC11/EC11E15204A3.html
+rotary encoder
+0
+5
+5
+Ahsan Libs
+S352818_BigHole
+Add-on for regular MX-footprints with Mx_S352818_RGB
+Cherry Mx_S352818_RGB rearmount rear mount led rgb backlight
+0
+4
+4
+Ahsan Libs
+SCHURTER 0031.7601
+
+
+0
+2
+2
+Ahsan Libs
+SHDR16W56P254_2X8_2782X850X950P
+HIF3FC-16PA-2.54DSA(71)
+Connector
+0
+16
+16
+Ahsan Libs
+SI2301
+
+SI2301-TP 
+0
+3
+3
+Ahsan Libs
+SK6812-MiniE_BigHole
+Add-on for regular MX-footprints with Mx_S352818_RGB
+Cherry Mx_S352818_RGB rearmount rear mount led rgb backlight
+0
+4
+4
+Ahsan Libs
+SK6812-MiniE_BigHole_Nolabel
+Add-on for regular MX-footprints with Mx_S352818_RGB
+Cherry Mx_S352818_RGB rearmount rear mount led rgb backlight
+0
+4
+4
+Ahsan Libs
+SK6812-MiniE_Kbd
+Add-on for regular MX-footprints with Mx_S352818_RGB
+Cherry Mx_S352818_RGB rearmount rear mount led rgb backlight
+0
+4
+4
+Ahsan Libs
+SK6812MINI-E_Noborder
+
+
+0
+4
+4
+Ahsan Libs
+SK6812MINI-E_Noborder_back
+
+
+0
+4
+4
+Ahsan Libs
+SMD-4P-12x12mm-DTSM-21N-S-V-TR
+
+
+0
+4
+4
+Ahsan Libs
+SMDIP-6_W9.53mm
+
+
+0
+6
+6
+Ahsan Libs
+SN74LVC1G07DCKR
+
+
+0
+5
+5
+Ahsan Libs
+SOIC127P600X175-8N
+8-pin (150mil) SOP
+Integrated Circuit
+0
+8
+8
+Ahsan Libs
+SOP-16_3.9x9.9mm_P1.27mm
+SOP, 16 Pin (https://www.diodes.com/assets/Datasheets/PAM8403.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+SOP SO
+0
+16
+16
+Ahsan Libs
+SOT-23
+SOT, 3 Pin (https://www.jedec.org/system/files/docs/to-236h.pdf variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py
+SOT TO_SOT_SMD
+0
+3
+3
+Ahsan Libs
+SOT-23-5_tp4065
+
+
+0
+5
+5
+Ahsan Libs
+SOT-25-5_L3.0-W1.8-P0.95-LS3.0-BR
+
+
+0
+5
+5
+Ahsan Libs
+SOT-89-3
+SOT-89-3, http://ww1.microchip.com/downloads/en/DeviceDoc/3L_SOT-89_MB_C04-029C.pdf
+SOT-89-3
+0
+3
+3
+Ahsan Libs
+SOT-363_L2.0-W1.3-P0.65-LS2.1-BR
+
+
+0
+6
+6
+Ahsan Libs
+SOT95P280X125-5N
+sot-23-5 pin
+Integrated Circuit
+0
+5
+5
+Ahsan Libs
+SP335ECR1-L
+
+SP335ECR1-L 
+0
+33
+33
+Ahsan Libs
+SRD-12VDC-SD-C
+
+
+0
+5
+5
+Ahsan Libs
+SSD1306-0.91-OLED-4pin-128x32
+
+
+0
+4
+4
+Ahsan Libs
+SSD1306-0.91-OLED-4pin-128x32_nosilk
+
+
+0
+4
+4
+Ahsan Libs
+SSD1306-128X64_0.96inch
+Through hole straight pin header, 1x04, 2.54mm pitch, single row
+Through hole pin header THT 1x04 2.54mm single row
+0
+4
+4
+Ahsan Libs
+SW-SMD-TS-1088-AR02016
+
+
+0
+2
+2
+Ahsan Libs
+SW-SMD_4P-L4.8-W4.8-P2.70-LS4.6-TL
+
+
+0
+4
+4
+Ahsan Libs
+SW4-SMD-6.0X6.0X5.0MM
+
+
+0
+4
+4
+Ahsan Libs
+SW_Cherry_MX_1.00u_PCB
+Cherry MX keyswitch, 1.00u, PCB mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
+Cherry MX keyswitch 1.00u PCB
+0
+2
+2
+Ahsan Libs
+SW_Cherry_MX_ISOEnter_PCB
+Cherry MX keyswitch, ISO Enter, PCB mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
+Cherry MX keyswitch ISO enter PCB
+0
+4
+4
+Ahsan Libs
+SW_Hotswap_Kailh_1.00u
+Kailh keyswitch Hotswap Socket, 
+Kailh Keyboard Keyswitch Switch Hotswap Socket 1.00u
+0
+2
+2
+Ahsan Libs
+SW_Hotswap_Kailh_1.00u_Nosilk
+Kailh keyswitch Hotswap Socket, 
+Kailh Keyboard Keyswitch Switch Hotswap Socket 1.00u
+0
+4
+2
+Ahsan Libs
+SW_Hotswap_Kailh_1.00u_front
+Kailh keyswitch Hotswap Socket, 
+Kailh Keyboard Keyswitch Switch Hotswap Socket 1.00u
+0
+2
+2
+Ahsan Libs
+SW_Hotswap_Kailh_1.00u_rev
+Kailh keyswitch Hotswap Socket, 
+Kailh Keyboard Keyswitch Switch Hotswap Socket 1.00u
+0
+2
+2
+Ahsan Libs
+SW_MSK12C02-HB
+12V 50mA SMD toggle switch, available at LCSC/JLCPCB (C431541)
+switch toggle smd 
+0
+7
+4
+Ahsan Libs
+Seeeduino XIAO-MOUDLE14P-2.54-21X17.8MM
+
+
+0
+20
+20
+Ahsan Libs
+Stabilizer_Cherry_MX_2.00u
+Cherry MX PCB Stabilizer 2.00u 2.25u 2.50u 2.75u
+Cherry MX Keyboard Stabilizer 2.00u 2.25u 2.50u 2.75u Cutout
+0
+0
+0
+Ahsan Libs
+Stabilizer_Cherry_MX_2.00u_kbd
+Cherry MX PCB Stabilizer 2.00u 2.25u 2.50u 2.75u
+Cherry MX Keyboard Stabilizer 2.00u 2.25u 2.50u 2.75u Cutout
+0
+0
+0
+Ahsan Libs
+Stabilizer_Cherry_MX_6.25u
+Cherry MX PCB Stabilizer 6.25u
+Cherry MX Keyboard Stabilizer 6.25u Cutout
+0
+0
+0
+Ahsan Libs
+Stabilizer_Cherry_MX_6.25u_kbd
+Cherry MX PCB Stabilizer 6.25u
+Cherry MX Keyboard Stabilizer 6.25u Cutout
+0
+0
+0
+Ahsan Libs
+Stabilizer_Cherry_MX_7.0u
+Cherry MX PCB Stabilizer 6.25u
+Cherry MX Keyboard Stabilizer 6.25u Cutout
+0
+0
+0
+Ahsan Libs
+T435-600B-TR
+
+T435-600B-TR 
+0
+3
+3
+Ahsan Libs
+TB6642FG,8,EL
+
+TB6642FG_8_EL 
+0
+18
+18
+Ahsan Libs
+TC1044SCPA
+
+TC1044SCPA 
+0
+8
+8
+Ahsan Libs
+TCA6424ARGJR
+
+TCA6424ARGJR 
+0
+38
+34
+Ahsan Libs
+TMC5072-LA
+
+
+0
+49
+49
+Ahsan Libs
+TMC5072-LA-T
+
+TMC5072-LA-T 
+0
+49
+49
+Ahsan Libs
+TMUX1511RSVR
+
+TMUX1511RSVR 
+0
+16
+16
+Ahsan Libs
+TPS4H160AQPWPRQ1 (1)
+
+TPS4H160AQPWPRQ1 
+0
+50
+30
+Ahsan Libs
+TPS4H160AQPWPRQ1 (2)
+
+TPS4H160AQPWPRQ1 
+0
+50
+30
+Ahsan Libs
+TPS4H160AQPWPRQ1 (3)
+
+TPS4H160AQPWPRQ1 
+0
+50
+30
+Ahsan Libs
+TRRS-PJ-320A
+
+
+0
+4
+4
+Ahsan Libs
+TS12A44514PWR
+
+
+0
+14
+14
+Ahsan Libs
+TVS_SMB_L4.6-W3.6-LS5.3-BI
+
+
+0
+2
+2
+Ahsan Libs
+TVS_SMF_L2.8-W1.8-LS3.7-BI
+
+
+0
+2
+2
+Ahsan Libs
+Temerature sensor 1x04 2.54mm
+Through hole straight pin header, 1x04, 2.54mm pitch, single row
+Through hole pin header THT 1x04 2.54mm single row
+0
+4
+4
+Ahsan Libs
+Tenting_Puck_2.2mm
+
+
+0
+1
+1
+Ahsan Libs
+TerminalBlock_MetzConnect_Type703_RT10N02HGLU_1x02_P9.52mm_Horizontal
+terminal block Metz Connect Type703_RT10N02HGLU, 2 pins, pitch 9.52mm, size 19x12.5mm^2, drill diamater 1.3mm, pad diameter 2.6mm, see http://www.metz-connect.com/de/system/files/productfiles/Datenblatt_317031_RT10NxxHGLU_OFF-022897S.pdf, script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_MetzConnect
+THT terminal block Metz Connect Type703_RT10N02HGLU pitch 9.52mm size 19x12.5mm^2 drill 1.3mm pad 2.6mm
+0
+2
+2
+Ahsan Libs
+TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal
+Terminal Block Phoenix MKDS-1,5-2-5.08, 2 pins, pitch 5.08mm, size 10.2x9.8mm^2, drill diamater 1.3mm, pad diameter 2.6mm, see http://www.farnell.com/datasheets/100425.pdf, script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_Phoenix
+THT Terminal Block Phoenix MKDS-1,5-2-5.08 pitch 5.08mm size 10.2x9.8mm^2 drill 1.3mm pad 2.6mm
+0
+2
+2
+Ahsan Libs
+TerminalBlock_bornier-5_P5.08mm
+simple 5-pin terminal block, pitch 5.08mm, revamped version of bornier5
+terminal block bornier5
+0
+5
+5
+Ahsan Libs
+USB-A-TH__USB-AF-90
+
+
+0
+6
+6
+Ahsan Libs
+USB-B-TH_67068-8000
+
+
+0
+6
+6
+Ahsan Libs
+USB_C_Receptacle_HRO_TYPE-C-31-M-12
+USB Type-C receptacle for USB 2.0 and PD, http://www.krhro.com/uploads/soft/180320/1-1P320120243.pdf
+usb usb-c 2.0 pd
+0
+20
+17
+Ahsan Libs
+VLC5045T-6R8M
+
+VLC5045T-6R8M 
+0
+2
+2
+Ahsan Libs
+WS2812B-2020
+https://www.tme.eu/Document/4a8239e52df5e0b5cc2eb96834c5d8b6/WS2812B-2020.pdf
+
+0
+4
+4
+Ahsan Libs
+XCVR_ANT5320LL45R2400A
+
+
+0
+2
+2
+Ahsan Libs
+XCVR_MDBT50Q-1MV2
+
+
+0
+61
+61
+Ahsan Libs
+crone_diode
+Resitance 3 pas
+R
+0
+2
+2
+Ahsan Libs
+edge_plating
+Mounting Hole 2.2mm, M2, DIN965
+mounting hole 2.2mm m2 din965
+0
+1
+1
+Ahsan Libs
+kbd_MoutingHole_Oval_Poker_7mm_5.0x2.5mm
+
+
+0
+1
+1
+Ahsan Libs
+mouse-bite-1mm-slot
+
+
+0
+0
+0
+Ahsan Libs
+mouse-bite-2.54mm-slot
+
+
+0
+0
+0
+Ahsan Libs
+mouse-bite-2mm-slot
+
+
+0
+0
+0
+Ahsan Libs
+mouse-bite-3mm-slot
+
+
+0
+0
+0
+Ahsan Libs
+mouse-bite-5mm-slot
+
+
+0
+0
+0
+Ahsan Libs
+nRF52840_holyiot_18010
+
+
+0
+55
+55
+Ahsan Libs
+pimoroni_left_side_mount
+Through hole straight pin header, 1x05, 1.00mm pitch, single row
+Through hole pin header THT 1x05 1.00mm single row
+0
+7
+7

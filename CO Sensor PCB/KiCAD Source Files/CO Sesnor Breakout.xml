@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>D:\Circuit2PCB\mpmurphy Esp32C3 PCB\CO Sensor PCB\KiCAD Source Files\CO Sesnor Breakout.kicad_sch</source>
+    <date>11/08/2023 4:57:08 am</date>
+    <tool>Eeschema 7.0.2</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>CO Sesnor Breakout</title>
+        <company/>
+        <rev>1</rev>
+        <date>2023-08-11</date>
+        <source>CO Sesnor Breakout.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="J17">
+      <value>CO Sensor</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector" part="Screw_Terminal_01x03" description="Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="CO Sesnor Breakout.kicad_sch"/>
+      <property name="ki_description" value="Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="screw terminal"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ed36bc13-ff96-4f37-b910-feefd8111e3d</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>10K</value>
+      <footprint>Ahsan Libs:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="CO Sesnor Breakout.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0d7956a8-f0b4-49bc-b4b1-278d45521602</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>10K</value>
+      <footprint>Ahsan Libs:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="CO Sesnor Breakout.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c9d09215-a6d8-42f4-b410-fc7da5048166</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>100K</value>
+      <footprint>Ahsan Libs:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="CO Sesnor Breakout.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>554e7510-173d-4bcf-9933-97bfa2074c57</tstamps>
+    </comp>
+    <comp ref="U4">
+      <value>110-102</value>
+      <footprint>Ahsan Libs:CO Sensor</footprint>
+      <fields>
+        <field name="MANUFACTURER">SPEC SENSOR</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">4.193mm</field>
+        <field name="PARTREV">April 2017</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
+      </fields>
+      <libsource lib="CO Sensor" part="110-102" description=""/>
+      <property name="PARTREV" value="April 2017"/>
+      <property name="STANDARD" value="Manufacturer Recommendations"/>
+      <property name="MAXIMUM_PACKAGE_HEIGHT" value="4.193mm"/>
+      <property name="MANUFACTURER" value="SPEC SENSOR"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="CO Sesnor Breakout.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ff69f9d8-4b60-4c19-99d6-48546b9628c6</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="CO Sensor" part="110-102">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">110-102</field>
+        <field name="Footprint">XDCR_110-102</field>
+        <field name="PARTREV">April 2017</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">4.193mm</field>
+        <field name="MANUFACTURER">SPEC SENSOR</field>
+      </fields>
+      <pins>
+        <pin num="1" name="WORKING" type="bidirectional"/>
+        <pin num="2" name="NC_2" type="no_connect"/>
+        <pin num="3" name="NC_3" type="no_connect"/>
+        <pin num="4" name="REFERENCE" type="input"/>
+        <pin num="5" name="COUNTER" type="bidirectional"/>
+        <pin num="6" name="WORKING" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Screw_Terminal_01x03">
+      <description>Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TerminalBlock*:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Screw_Terminal_01x03</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="CO Sensor">
+      <uri>D:/Keyboard KiCAD Libraries/Ahsan Lib/CO Sensor.kicad_sym</uri>
+    </library>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Connector.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="3.3V">
+      <node ref="J17" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+    </net>
+    <net code="2" name="GND">
+      <node ref="J17" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+    </net>
+    <net code="3" name="Net-(R1-Pad2)">
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="U4" pin="1" pinfunction="WORKING" pintype="bidirectional"/>
+      <node ref="U4" pin="6" pinfunction="WORKING" pintype="bidirectional"/>
+    </net>
+    <net code="4" name="RC">
+      <node ref="J17" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="U4" pin="4" pinfunction="REFERENCE" pintype="input"/>
+      <node ref="U4" pin="5" pinfunction="COUNTER" pintype="bidirectional"/>
+    </net>
+    <net code="5" name="unconnected-(U4-NC_2-Pad2)">
+      <node ref="U4" pin="2" pinfunction="NC_2" pintype="no_connect"/>
+    </net>
+    <net code="6" name="unconnected-(U4-NC_3-Pad3)">
+      <node ref="U4" pin="3" pinfunction="NC_3" pintype="no_connect"/>
+    </net>
+  </nets>
+</export>
