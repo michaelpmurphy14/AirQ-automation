@@ -1,193 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ESP32 Web BLE App</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="">
+    <title>Arduino Bluetooth Control</title>
 </head>
 <body>
-  <h1>ESP32 Web BLE Application</h1>
-  <button id="connectBleButton">Connect to BLE Device</button>
-  <button id="disconnectBleButton">Disconnect BLE Device</button>
-  <p>BLE state: <strong><span id="bleState" style="color:#d13a30;">Disconnected</span></strong></p>
-  
-  <h2>Sensor Data</h2>
-  <p>Gas Resistance: <span id="sensorData">NaN</span></p>
-
-  <h2>Control NeoPixel LED</h2>
-  <button id="ledOnButton">LED ON</button>
-  <button id="ledOffButton">LED OFF</button>
-
-  <h2>Control Buzzer</h2>
-  <button id="buzzerOnButton">Buzzer ON</button>
-  <button id="buzzerOffButton">Buzzer OFF</button>
-
-  <h2>Battery Level</h2>
-  <p>Battery Voltage: <span id="batteryLevel">0V</span></p>
-
+    <h1>Arduino Bluetooth Control Panel</h1>
+    <button id="connect">Connect to Bluetooth</button>
+    <button id="disconnect" disabled>Disconnect</button>
+    <h2>Sensor Data</h2>
+    <div id="sensorData">Waiting for data...</div>
+    <h2>Controls</h2>
+    <button id="ledRed">Red LED</button>
+    <button id="ledGreen">Green LED</button>
+    <button id="ledBlue">Blue LED</button>
+    <button id="ledOff">LED Off</button>
+    <button id="buzzerOn">Buzzer On</button>
+    <button id="buzzerOff">Buzzer Off</button>
+    <script src="app.js"></script>
 </body>
-<script>
-    // DOM Elements
-    const connectButton = document.getElementById('connectBleButton');
-    const disconnectButton = document.getElementById('disconnectBleButton');
-    const ledOnButton = document.getElementById('ledOnButton');
-    const ledOffButton = document.getElementById('ledOffButton');
-    const buzzerOnButton = document.getElementById('buzzerOnButton');
-    const buzzerOffButton = document.getElementById('buzzerOffButton');
-    const sensorDataContainer = document.getElementById('sensorData');
-    const batteryLevelContainer = document.getElementById('batteryLevel');
-    const bleStateContainer = document.getElementById('bleState');
-
-    // BLE Device Specs
-    var deviceName ='ESP32';
-    var bleService = '19b10000-e8f2-537e-4f6c-d104768a1214';
-    var sensorCharacteristic = '19b10001-e8f2-537e-4f6c-d104768a1214';
-    var ledCharacteristic = '19b10002-e8f2-537e-4f6c-d104768a1214';
-    var buzzerCharacteristic = '19b10003-e8f2-537e-4f6c-d104768a1214';
-    var batteryCharacteristic = '19b10004-e8f2-537e-4f6c-d104768a1214';
-
-    // Global Variables for Bluetooth
-    var bleServer;
-    var bleServiceFound;
-
-    // Connect Button Event Listener
-    connectButton.addEventListener('click', (event) => {
-        if (isWebBluetoothEnabled()){
-            connectToDevice();
-        }
-    });
-
-    // Disconnect Button Event Listener
-    disconnectButton.addEventListener('click', disconnectDevice);
-
-    // LED Button Event Listeners
-    ledOnButton.addEventListener('click', () => writeLedCharacteristic(255, 0, 0)); // Example: Turn LED Red
-    ledOffButton.addEventListener('click', () => writeLedCharacteristic(0, 0, 0)); // Turn LED Off
-
-    // Buzzer Button Event Listeners
-    buzzerOnButton.addEventListener('click', () => writeBuzzerCharacteristic(1));
-    buzzerOffButton.addEventListener('click', () => writeBuzzerCharacteristic(0));
-
-    // Check if Web Bluetooth is Available
-    function isWebBluetoothEnabled() {
-        if (!navigator.bluetooth) {
-            console.log("Web Bluetooth API is not available in this browser!");
-            bleStateContainer.innerHTML = "Web Bluetooth API is not available in this browser!";
-            return false;
-        }
-        console.log('Web Bluetooth API supported in this browser.');
-        return true;
-    }
-
-    // Connect to BLE Device and Enable Notifications
-    function connectToDevice(){
-        console.log('Initializing Bluetooth...');
-        navigator.bluetooth.requestDevice({
-            filters: [{name: deviceName}],
-            optionalServices: [bleService]
-        })
-        .then(device => {
-            console.log('Device Selected:', device.name);
-            bleStateContainer.innerHTML = 'Connected to device ' + device.name;
-            bleStateContainer.style.color = "#24af37";
-            device.addEventListener('gattservicedisconnected', onDisconnected);
-            return device.gatt.connect();
-        })
-        .then(gattServer =>{
-            bleServer = gattServer;
-            console.log("Connected to GATT Server");
-            return bleServer.getPrimaryService(bleService);
-        })
-        .then(service => {
-            bleServiceFound = service;
-            console.log("Service discovered:", service.uuid);
-            return service.getCharacteristic(sensorCharacteristic);
-        })
-        .then(characteristic => {
-            console.log("Sensor Characteristic discovered:", characteristic.uuid);
-            characteristic.addEventListener('characteristicvaluechanged', handleSensorCharacteristicChange);
-            return characteristic.startNotifications();
-        })
-        .then(() => {
-            console.log("Sensor Notifications Started.");
-            return bleServiceFound.getCharacteristic(batteryCharacteristic);
-        })
-        .then(characteristic => {
-            console.log("Battery Characteristic discovered:", characteristic.uuid);
-            characteristic.addEventListener('characteristicvaluechanged', handleBatteryCharacteristicChange);
-            return characteristic.startNotifications();
-        })
-        .then(() => {
-            console.log("Battery Notifications Started.");
-        })
-        .catch(error => {
-            console.log('Error: ', error);
-        })
-    }
-
-    function onDisconnected(event){
-        console.log('Device Disconnected:', event.target.device.name);
-        bleStateContainer.innerHTML = "Device disconnected";
-        bleStateContainer.style.color = "#d13a30";
-        connectToDevice();
-    }
-
-    function handleSensorCharacteristicChange(event){
-        const sensorValue = new TextDecoder().decode(event.target.value);
-        console.log("Sensor value changed: ", sensorValue);
-        sensorDataContainer.innerHTML = sensorValue;
-    }
-
-    function handleBatteryCharacteristicChange(event){
-        const batteryVoltage = new TextDecoder().decode(event.target.value);
-        batteryLevelContainer.innerHTML = batteryVoltage + 'V';
-    }
-
-    function writeLedCharacteristic(value){
-        writeCharacteristic(ledCharacteristic, value);
-    }
-
-    function writeBuzzerCharacteristic(value){
-        writeCharacteristic(buzzerCharacteristic, value);
-    }
-
-    function writeLedCharacteristic(red, green, blue){
-        if (bleServer && bleServer.connected) {
-            bleServiceFound.getCharacteristic(ledCharacteristic)
-            .then(characteristic => {
-                console.log("Found the LED characteristic: ", characteristic.uuid);
-                const data = new Uint8Array([red, green, blue]);
-                return characteristic.writeValue(data);
-            })
-            .then(() => {
-                console.log("RGB values written to LED characteristic:", red, green, blue);
-            })
-            .catch(error => {
-                console.error("Error writing to the LED characteristic: ", error);
-            });
-        } else {
-            console.error ("Bluetooth is not connected. Cannot write to characteristic.")
-            window.alert("Bluetooth is not connected. Cannot write to characteristic. \n Connect to BLE first!")
-        }
-    }
-
-    function disconnectDevice() {
-        console.log("Disconnect Device.");
-        if (bleServer && bleServer.connected) {
-            bleServer.disconnect()
-                .then(() => {
-                    console.log("Device Disconnected");
-                    bleStateContainer.innerHTML = "Device Disconnected";
-                    bleStateContainer.style.color = "#d13a30";
-                })
-                .catch(error => {
-                    console.log("An error occurred:", error);
-                });
-        } else {
-            console.error("Bluetooth is not connected.");
-            window.alert("Bluetooth is not connected.")
-        }
-    }
-</script>
-
 </html>
