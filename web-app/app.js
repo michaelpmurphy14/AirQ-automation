@@ -76,19 +76,22 @@ disconnectButton.addEventListener('click', () => {
     }
 });
 
-// Handle BME680 Data
+// Sensor Data
 function handleCombinedSensorData(event) {
-    let combinedValue = new TextDecoder().decode(event.target.value);
-    let [tempData, vocData] = combinedValue.split(', ');
-    sensorDataContainer.textContent = tempData;
-    let vocLevelContainer = document.getElementById('vocLevel');
-    vocLevelContainer.textContent = vocData;
-}
+    let combinedData = new TextDecoder().decode(event.target.value);
+    let dataParts = combinedData.split(', '); // Assuming the format is "Temp:XX.X°C, CO:YY ppm, VOC:ZZ ohms"
 
-// Handle CO Data
-function handleCOLevel(event) {
-    let COValue = new TextDecoder().decode(event.target.value);
-    coLevelContainer.textContent = COValue + ' PPM'; // This should update the CO level, not the battery level
+    // Extract and update temperature data
+    let temperatureData = dataParts[0].split(':')[1]; // "XX.X°C"
+    document.getElementById('temperatureData').textContent = temperatureData;
+
+    // Extract and update CO level data
+    let coData = dataParts[1].split(':')[1]; // "YY ppm"
+    document.getElementById('coData').textContent = coData;
+
+    // Extract and update VOC level data
+    let vocData = dataParts[2].split(':')[1]; // "ZZ ohms"
+    document.getElementById('vocData').textContent = vocData;
 }
 
 // Handle Battery Level
