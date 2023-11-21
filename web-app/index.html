@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Air Quality Monitor</title>
+    <title>ESP32 Web BLE App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <h1>Air Quality Monitor</h1>
+    <h1>ESP32 Web BLE Application</h1>
     <button id="connectBleButton">Connect to BLE Device</button>
-    <button id="disconnectBleButton" disabled>Disconnect BLE Device</button>
+    <button id="disconnectBleButton">Disconnect BLE Device</button>
     <p>BLE state: <strong><span id="bleState" style="color:#d13a30;">Disconnected</span></strong></p>
-
     <h2>Sensor Data</h2>
-    <p>Gas Resistance: <span id="gasResistance">-</span></p>
-    <p>Battery Level: <span id="batteryLevel">N/A</span></p>
-
-    <h2>Control</h2>
-    <button id="ledRed">Red LED</button>
-    <button id="ledGreen">Green LED</button>
-    <button id="ledBlue">Blue LED</button>
-    <button id="ledOff">LED Off</button>
-    <button id="buzzerOn">Buzzer On</button>
-    <button id="buzzerOff">Buzzer Off</button>
-
-    <script src="app.js"></script>
+    <p><span id="sensorData">N/A</span></p>
+    <h2>Battery Level</h2>
+    <p><span id="batteryLevel">N/A</span></p>
+    <h2>Control Buzzer</h2>
+    <button id="buzzerOnButton">Buzzer ON</button>
+    <button id="buzzerOffButton">Buzzer OFF</button>
 </body>
+<script src="app.js"></script>
 </html>
