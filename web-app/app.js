@@ -7,13 +7,16 @@ const sensorDataContainer = document.getElementById('sensorData');
 const batteryLevelContainer = document.getElementById('batteryLevel');
 const coLevelContainer = document.getElementById('coData');
 const bleStateContainer = document.getElementById('bleState');
+const vocLevelContainer = document.getElementById('vocLevel');
 
 // BLE Service and Characteristic UUIDs
 const bleServiceUUID = '19b10000-e8f2-537e-4f6c-d104768a1214';
 const sensorCharacteristicUUID = '19b10001-e8f2-537e-4f6c-d104768a1214';
 const batteryCharacteristicUUID = '19b10004-e8f2-537e-4f6c-d104768a1214';
 const buzzerCharacteristicUUID = '19b10003-e8f2-537e-4f6c-d104768a1214';
-const coCharacteristicUUID = 'de5941c4-8844-11ee-b9d1-0242ac120002';
+const coCharacteristicUUID = '7bdde790-1e7e-4f7b-9835-78b323b5315d';
+const vocCharacteristicUUID = 'yf9b86e74-3f53-427b-8d91-1023115eb99d';
+
 
 // Global Variables for BLE
 let bleDevice = null;
@@ -43,13 +46,14 @@ connectButton.addEventListener('click', async () => {
         batteryCharacteristic = await service.getCharacteristic(batteryCharacteristicUUID);
         coCharacteristic = await service.getCharacteristic(coCharacteristicUUID);
         buzzerCharacteristic = await service.getCharacteristic(buzzerCharacteristicUUID);
-
+        vocCharacteristic = await service.getCharacteristic(vocCharacteristicUUID);
         bleStateContainer.innerHTML = 'Connected';
         bleStateContainer.style.color = '#24af37';
 
         await startNotifications(sensorCharacteristic, handleSensorData);
         await startNotifications(batteryCharacteristic, handleBatteryLevel);
         await startNotifications(coCharacteristic, handleCOLevel);
+        await startNotifications(vocCharacteristic, handleVOCLevel);
     } catch (error) {
         console.log('Argh! ' + error);
     }
@@ -80,6 +84,13 @@ function handleSensorData(event) {
 function handleCOLevel(event) {
     let COValue = new TextDecoder().decode(event.target.value);
     coLevelContainer.textContent = COValue + ' PPM'; // This should update the CO level, not the battery level
+}
+
+
+// Handle VOC
+function handleVOCLevel(event) {
+    let vocValue = new TextDecoder().decode(event.target.value);
+    vocLevelContainer.textContent = vocValue + ' Ohm';
 }
 
 // Handle Battery Level
