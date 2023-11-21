@@ -11,69 +11,65 @@
   <button id="disconnectBleButton">Disconnect BLE Device</button>
   <p>BLE state: <strong><span id="bleState" style="color:#d13a30;">Disconnected</span></strong></p>
   
-  <h2>Sensor Readings</h2>
-  <p>Gas Resistance: <span id="gasValue">NaN</span></p>
-  <p>Temperature: <span id="tempValue">NaN</span> °C</p>
-  <p>Humidity: <span id="humidityValue">NaN</span> %</p>
-  <p>Pressure: <span id="pressureValue">NaN</span> hPa</p>
-  
+  <h2>Sensor Data</h2>
+  <p>Gas Resistance: <span id="sensorData">NaN</span></p>
+
   <h2>Control NeoPixel LED</h2>
-  <button id="onButton">White</button>
-  <button id="offButton">Off</button>
+  <button id="ledOnButton">LED ON</button>
+  <button id="ledOffButton">LED OFF</button>
 
   <h2>Control Buzzer</h2>
   <button id="buzzerOnButton">Buzzer ON</button>
   <button id="buzzerOffButton">Buzzer OFF</button>
 
-  <p><a href="https://randomnerdtutorials.com/">Created by RandomNerdTutorials.com</a></p>
-  <p><a href="https://RandomNerdTutorials.com/esp32-web-bluetooth/">Read the full project here.</a></p>
+  <h2>Battery Level</h2>
+  <p>Battery Percentage: <span id="batteryLevel">0%</span></p>
+
+
 </body>
 <script>
     // DOM Elements
     const connectButton = document.getElementById('connectBleButton');
     const disconnectButton = document.getElementById('disconnectBleButton');
-    const onButton = document.getElementById('onButton');
-    const offButton = document.getElementById('offButton');
+    const ledOnButton = document.getElementById('ledOnButton');
+    const ledOffButton = document.getElementById('ledOffButton');
     const buzzerOnButton = document.getElementById('buzzerOnButton');
     const buzzerOffButton = document.getElementById('buzzerOffButton');
-    const gasValueContainer = document.getElementById('gasValue');
-    const tempValueContainer = document.getElementById('tempValue');
-    const humidityValueContainer = document.getElementById('humidityValue');
-    const pressureValueContainer = document.getElementById('pressureValue');
+    const sensorDataContainer = document.getElementById('sensorData');
+    const batteryLevelContainer = document.getElementById('batteryLevel');
     const bleStateContainer = document.getElementById('bleState');
 
-    // Define BLE Device Specs
+    // BLE Device Specs
     var deviceName ='ESP32';
     var bleService = '19b10000-e8f2-537e-4f6c-d104768a1214';
+    var sensorCharacteristic = '19b10001-e8f2-537e-4f6c-d104768a1214';
     var ledCharacteristic = '19b10002-e8f2-537e-4f6c-d104768a1214';
-    var sensorCharacteristic= '19b10001-e8f2-537e-4f6c-d104768a1214';
-    var temperatureCharacteristic = '19b10003-e8f2-537e-4f6c-d104768a1214';
-    var humidityCharacteristic = '19b10004-e8f2-537e-4f6c-d104768a1214';
-    var pressureCharacteristic = '19b10005-e8f2-537e-4f6c-d104768a1214';
-    var buzzerCharacteristic = '19b10006-e8f2-537e-4f6c-d104768a1214';
+    var buzzerCharacteristic = '19b10003-e8f2-537e-4f6c-d104768a1214';
+    var batteryCharacteristic = '19b10004-e8f2-537e-4f6c-d104768a1214';
 
-    // Global Variables to Handle Bluetooth
+    // Global Variables for Bluetooth
     var bleServer;
     var bleServiceFound;
-    var sensorCharacteristicFound;
-    var temperatureCharacteristicFound;
-    var humidityCharacteristicFound;
-    var pressureCharacteristicFound;
-    var buzzerCharacteristicFound;
 
-    // Event Listeners
+    // Connect Button Event Listener
     connectButton.addEventListener('click', (event) => {
         if (isWebBluetoothEnabled()){
             connectToDevice();
         }
     });
-    disconnectButton.addEventListener('click', disconnectDevice);
-    onButton.addEventListener('click', () => writeOnCharacteristic(0xFFFFFF)); // White color
-    offButton.addEventListener('click', () => writeOnCharacteristic(0x000000)); // Off
-    buzzerOnButton.addEventListener('click', () => writeBuzzerCharacteristic(1)); // Buzzer on
-    buzzerOffButton.addEventListener('click', () => writeBuzzerCharacteristic(0)); // Buzzer off
 
-    // Check if BLE is available in your Browser
+    // Disconnect Button Event Listener
+    disconnectButton.addEventListener('click', disconnectDevice);
+
+    // LED Button Event Listeners
+    ledOnButton.addEventListener('click', () => writeLedCharacteristic(1));
+    ledOffButton.addEventListener('click', () => writeLedCharacteristic(0));
+
+    // Buzzer Button Event Listeners
+    buzzerOnButton.addEventListener('click', () => writeBuzzerCharacteristic(1));
+    buzzerOffButton.addEventListener('click', () => writeBuzzerCharacteristic(0));
+
+    // Check if Web Bluetooth is Available
     function isWebBluetoothEnabled() {
         if (!navigator.bluetooth) {
             console.log("Web Bluetooth API is not available in this browser!");
@@ -106,35 +102,33 @@
         .then(service => {
             bleServiceFound = service;
             console.log("Service discovered:", service.uuid);
-            return Promise.all([
-                service.getCharacteristic(sensorCharacteristic),
-                service.getCharacteristic(temperatureCharacteristic),
-                service.getCharacteristic(humidityCharacteristic),
-                service.getCharacteristic(pressureCharacteristic),
-                service.getCharacteristic(buzzerCharacteristic)
-            ]);
+            return service.getCharacteristic(sensorCharacteristic);
         })
-        .then(characteristics => {
-            sensorCharacteristicFound = characteristics[0];
-            temperatureCharacteristicFound = characteristics[1];
-            humidityCharacteristicFound = characteristics[2];
-            pressureCharacteristicFound = characteristics[3];
-            buzzerCharacteristicFound = characteristics[4];
-
-            sensorCharacteristicFound.addEventListener('characteristicvaluechanged', handleSensorCharacteristicChange);
-            temperatureCharacteristicFound.addEventListener('characteristicvaluechanged', handleTemperatureCharacteristicChange);
-            humidityCharacteristicFound.addEventListener('characteristicvaluechanged', handleHumidityCharacteristicChange);
-            pressureCharacteristicFound.addEventListener('characteristicvaluechanged', handlePressureCharacteristicChange);
-
-            return Promise.all([
-                sensorCharacteristicFound.startNotifications(),
-                temperatureCharacteristicFound.startNotifications(),
-                humidityCharacteristicFound.startNotifications(),
-                pressureCharacteristicFound.startNotifications()
-            ]);
+        .then(characteristic => {
+            console.log("Sensor Characteristic discovered:", characteristic.uuid);
+            characteristic.addEventListener('characteristicvaluechanged', handleSensorCharacteristicChange);
+            characteristic.startNotifications();
+            console.log("Sensor Notifications Started.");
+            return characteristic.readValue();
+        })
+        .then(value => {
+            const sensorValue = new TextDecoder().decode(value);
+            sensorDataContainer.innerHTML = sensorValue;
         })
         .then(() => {
-            console.log("Notifications Started.");
+            return bleServiceFound.getCharacteristic(batteryCharacteristic);
+        })
+        .then(characteristic => {
+            console.log("Battery Characteristic discovered:", characteristic.uuid);
+            characteristic.addEventListener('characteristicvaluechanged', handleBatteryCharacteristicChange);
+            characteristic.startNotifications();
+            console.log("Battery Notifications Started.");
+            return characteristic.readValue();
+        })
+        .then(value => {
+            const batteryVoltage = parseFloat(new TextDecoder().decode(value));
+            const batteryPercentage = calculateBatteryPercentage(batteryVoltage);
+            batteryLevelContainer.innerHTML = batteryPercentage + '%';
         })
         .catch(error => {
             console.log('Error: ', error);
@@ -149,62 +143,38 @@
     }
 
     function handleSensorCharacteristicChange(event){
-        const newValueReceived = new TextDecoder().decode(event.target.value);
-        console.log("Gas Resistance value changed: ", newValueReceived);
-        gasValueContainer.innerHTML = newValueReceived;
+        const sensorValue = new TextDecoder().decode(event.target.value);
+        console.log("Sensor value changed: ", sensorValue);
+        sensorDataContainer.innerHTML = sensorValue;
     }
 
-    function handleTemperatureCharacteristicChange(event){
-        const newValueReceived = new TextDecoder().decode(event.target.value);
-        console.log("Temperature value changed: ", newValueReceived);
-        tempValueContainer.innerHTML = newValueReceived;
+    function handleBatteryCharacteristicChange(event){
+        const batteryVoltage = parseFloat(new TextDecoder().decode(event.target.value));
+        const batteryPercentage = calculateBatteryPercentage(batteryVoltage);
+        batteryLevelContainer.innerHTML = batteryPercentage + '%';
     }
 
-    function handleHumidityCharacteristicChange(event){
-        const newValueReceived = new TextDecoder().decode(event.target.value);
-        console.log("Humidity value changed: ", newValueReceived);
-        humidityValueContainer.innerHTML = newValueReceived;
-    }
-
-    function handlePressureCharacteristicChange(event){
-        const newValueReceived = new TextDecoder().decode(event.target.value);
-        console.log("Pressure value changed: ", newValueReceived);
-        pressureValueContainer.innerHTML = newValueReceived;
-    }
-
-    function writeOnCharacteristic(value){
-        if (bleServer && bleServer.connected) {
-            bleServiceFound.getCharacteristic(ledCharacteristic)
-            .then(characteristic => {
-                console.log("Found the LED characteristic: ", characteristic.uuid);
-                const data = new Uint32Array([value]);
-                return characteristic.writeValue(data);
-            })
-            .then(() => {
-                console.log("Value written to LED characteristic:", value);
-            })
-            .catch(error => {
-                console.error("Error writing to the LED characteristic: ", error);
-            });
-        } else {
-            console.error ("Bluetooth is not connected. Cannot write to characteristic.")
-            window.alert("Bluetooth is not connected. Cannot write to characteristic. \n Connect to BLE first!")
-        }
+    function writeLedCharacteristic(value){
+        writeCharacteristic(ledCharacteristic, value);
     }
 
     function writeBuzzerCharacteristic(value){
+        writeCharacteristic(buzzerCharacteristic, value);
+    }
+
+    function writeCharacteristic(characteristicUuid, value){
         if (bleServer && bleServer.connected) {
-            bleServiceFound.getCharacteristic(buzzerCharacteristic)
+            bleServiceFound.getCharacteristic(characteristicUuid)
             .then(characteristic => {
-                console.log("Found the Buzzer characteristic: ", characteristic.uuid);
+                console.log("Found characteristic: ", characteristic.uuid);
                 const data = new Uint8Array([value]);
                 return characteristic.writeValue(data);
             })
             .then(() => {
-                console.log("Value written to Buzzer characteristic:", value);
+                console.log("Value written to characteristic:", characteristicUuid, value);
             })
             .catch(error => {
-                console.error("Error writing to the Buzzer characteristic: ", error);
+                console.error("Error writing to characteristic: ", error);
             });
         } else {
             console.error ("Bluetooth is not connected. Cannot write to characteristic.")
@@ -215,30 +185,28 @@
     function disconnectDevice() {
         console.log("Disconnect Device.");
         if (bleServer && bleServer.connected) {
-            Promise.all([
-                sensorCharacteristicFound.stopNotifications(),
-                temperatureCharacteristicFound.stopNotifications(),
-                humidityCharacteristicFound.stopNotifications(),
-                pressureCharacteristicFound.stopNotifications()
-            ])
-            .then(() => {
-                console.log("Notifications Stopped");
-                return bleServer.disconnect();
-            })
-            .then(() => {
-                console.log("Device Disconnected");
-                bleStateContainer.innerHTML = "Device Disconnected";
-                bleStateContainer.style.color = "#d13a30";
-            })
-            .catch(error => {
-                console.log("An error occurred:", error);
-            });
+            bleServer.disconnect()
+                .then(() => {
+                    console.log("Device Disconnected");
+                    bleStateContainer.innerHTML = "Device Disconnected";
+                    bleStateContainer.style.color = "#d13a30";
+                })
+                .catch(error => {
+                    console.log("An error occurred:", error);
+                });
         } else {
             console.error("Bluetooth is not connected.");
             window.alert("Bluetooth is not connected.")
         }
     }
+
+    function calculateBatteryPercentage(voltage) {
+        // Adjust these values based on your battery's characteristics
+        const maxVoltage = 4.2; // Maximum voltage of the battery
+        const minVoltage = 3.0; // Minimum voltage before the device turns off
+        const percentage = (voltage - minVoltage) / (maxVoltage - minVoltage) * 100;
+        return Math.min(Math.max(percentage, 0), 100).toFixed(0); // Clamps the value between 0% and 100%
+    }
 </script>
+
 </html>
-
-
