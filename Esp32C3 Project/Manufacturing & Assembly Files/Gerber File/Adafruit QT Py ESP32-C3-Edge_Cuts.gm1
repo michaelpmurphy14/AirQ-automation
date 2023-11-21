@@ -1,0 +1,23 @@
+G04 #@! TF.GenerationSoftware,KiCad,Pcbnew,7.0.2*
+G04 #@! TF.CreationDate,2023-08-11T05:28:22+05:00*
+G04 #@! TF.ProjectId,Adafruit QT Py ESP32-C3,41646166-7275-4697-9420-515420507920,rev?*
+G04 #@! TF.SameCoordinates,Original*
+G04 #@! TF.FileFunction,Profile,NP*
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 7.0.2) date 2023-08-11 05:28:22*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+G04 #@! TA.AperFunction,Profile*
+%ADD10C,0.050000*%
+G04 #@! TD*
+G04 APERTURE END LIST*
+D10*
+X134560000Y-94670000D02*
+X159450000Y-94670000D01*
+X159450000Y-135840000D01*
+X134560000Y-135840000D01*
+X134560000Y-94670000D01*
+M02*

@@ -1,0 +1,1355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>D:\Circuit2PCB\mpmurphy Esp32C3 PCB\Esp32C3 Project\KiCAD Source Files\Adafruit QT Py ESP32-C3.kicad_sch</source>
+    <date>11/08/2023 5:30:21 am</date>
+    <tool>Eeschema 7.0.2</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Adafruit QT Py ESP32-C3.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/BME680 Module/" tstamps="/45f49680-9ad6-4ee5-9cbe-6fd86a0c854f/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>BME680 Module.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="BZ1">
+      <value>Buzzer</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Device" part="Buzzer" description="Buzzer, polarized"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="Buzzer, polarized"/>
+      <property name="ki_keywords" value="quartz resonator ceramic"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>831b7f47-40b9-4041-aa82-6dd9e1e3c34e</tstamps>
+    </comp>
+    <comp ref="C1">
+      <value>22uF</value>
+      <footprint>Ahsan Libs:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="LCSC"> </field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value=" "/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>28ea7d1e-2fa9-4177-8664-64aab781f944</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>1uF</value>
+      <footprint>Ahsan Libs:C_0402_1005Metric</footprint>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="CAP_CERAMIC_0402NO" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>16d8b627-0cc5-4e4a-bd9b-8e5284434f2f</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>1uF</value>
+      <footprint>Ahsan Libs:C_0402_1005Metric</footprint>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="CAP_CERAMIC_0402NO" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>870a1cb9-2e3f-4de5-8737-85412a0926d5</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>0.1uF</value>
+      <footprint>Ahsan Libs:C_0402_1005Metric</footprint>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="CAP_CERAMIC_0402NO" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0c49f1f4-12bb-412c-b02f-49dbdde2e5df</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>22uF</value>
+      <footprint>Ahsan Libs:C_0805_2012Metric</footprint>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="CAP_CERAMIC0805-NOOUTLINE" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>26247a03-62bd-4a96-be13-9cd3231f869d</tstamps>
+    </comp>
+    <comp ref="C7">
+      <value>2.7pF</value>
+      <footprint>Ahsan Libs:C_0402_1005Metric</footprint>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="CAP_CERAMIC_0402NO" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>94c03224-0ff6-4103-a09f-014bf639e403</tstamps>
+    </comp>
+    <comp ref="C8">
+      <value>22uF</value>
+      <footprint>Ahsan Libs:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="LCSC"> </field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value=" "/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3280b17c-56e4-4f73-a9d1-1ad903360003</tstamps>
+    </comp>
+    <comp ref="C9">
+      <value>2pF</value>
+      <footprint>Ahsan Libs:C_0402_1005Metric</footprint>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="CAP_CERAMIC_0402NO" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7b99e962-fcfb-4f0c-9d86-41a257d90813</tstamps>
+    </comp>
+    <comp ref="C10">
+      <value>0.1uF</value>
+      <footprint>Ahsan Libs:C_0402_1005Metric</footprint>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="CAP_CERAMIC_0402NO" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6e3cde4a-c149-4c2c-a93a-a96b7e49fee2</tstamps>
+    </comp>
+    <comp ref="C11">
+      <value>1uF</value>
+      <footprint>Ahsan Libs:C_0402_1005Metric</footprint>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="CAP_CERAMIC_0402NO" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f30dfcef-3e6d-4835-9009-9e108a0528b3</tstamps>
+    </comp>
+    <comp ref="C14">
+      <value>0.1uF</value>
+      <footprint>Ahsan Libs:C_0402_1005Metric</footprint>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="CAP_CERAMIC_0402NO" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>81fa802b-08f9-4f47-b9f2-f82e18dfacea</tstamps>
+    </comp>
+    <comp ref="C15">
+      <value>1uF</value>
+      <footprint>Ahsan Libs:C_0402_1005Metric</footprint>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="CAP_CERAMIC_0402NO" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>db2ab153-1e40-480f-b8b6-58d3e1fc0862</tstamps>
+    </comp>
+    <comp ref="C16">
+      <value>0.01uF</value>
+      <footprint>Ahsan Libs:C_0402_1005Metric</footprint>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="CAP_CERAMIC_0402NO" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6f4b452f-e97b-4b13-85fd-13e42e86ee5e</tstamps>
+    </comp>
+    <comp ref="C17">
+      <value>16pF</value>
+      <footprint>Ahsan Libs:C_0402_1005Metric</footprint>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="CAP_CERAMIC_0402NO" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>132d3433-671b-4fe6-8955-85ea211c111f</tstamps>
+    </comp>
+    <comp ref="C18">
+      <value>16pF</value>
+      <footprint>Ahsan Libs:C_0402_1005Metric</footprint>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="CAP_CERAMIC_0402NO" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9eea8b38-f6bb-461d-9fda-13c72084ee0b</tstamps>
+    </comp>
+    <comp ref="C24">
+      <value>10uF</value>
+      <footprint>Ahsan Libs:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c132e139-eb3d-4bae-b8a5-ed40698a2ea2</tstamps>
+    </comp>
+    <comp ref="C25">
+      <value>10uF</value>
+      <footprint>Ahsan Libs:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C19702</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C19702"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4a33a485-39ae-4987-8d1c-0a6a60468eb2</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>B5817WL</value>
+      <footprint>Diode_SMD:D_SOD-123F</footprint>
+      <fields>
+        <field name="LCSC">C122853</field>
+      </fields>
+      <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
+      <property name="LCSC" value="C122853"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="Schottky diode"/>
+      <property name="ki_keywords" value="diode Schottky"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>79fdef57-59d9-42e5-aa1a-cd80adce21c6</tstamps>
+    </comp>
+    <comp ref="D5">
+      <value>  NSR0320</value>
+      <footprint>Esp32-C3:SOD-323_MINI</footprint>
+      <fields>
+        <field name="LCSC">C48192</field>
+      </fields>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="DIODE_SOD323MINI" description=""/>
+      <property name="LCSC" value="C48192"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>92b222be-95ce-4564-be4c-c8ffadfb444e</tstamps>
+    </comp>
+    <comp ref="Green2">
+      <value>Power</value>
+      <footprint>Ahsan Libs:LED_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C72041</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="LCSC" value="C72041"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="Light emitting diode"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8d43dead-bac1-4a00-978f-515df620e0cc</tstamps>
+    </comp>
+    <comp ref="J17">
+      <value>CO Sensor</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector" part="Screw_Terminal_01x03" description="Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="screw terminal"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>22ab98c4-c9f8-47aa-b0ac-e6740a3af4ae</tstamps>
+    </comp>
+    <comp ref="L1">
+      <value>2nH</value>
+      <footprint>Inductor_SMD:L_0402_1005Metric</footprint>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="INDUCTOR_0402" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8b7437e1-319a-49c3-8195-c65539b31264</tstamps>
+    </comp>
+    <comp ref="L2">
+      <value>2.2nH</value>
+      <footprint>Inductor_SMD:L_0402_1005Metric</footprint>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="INDUCTOR_0402" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>85438d85-10a5-4755-8f4d-bea56c921aa0</tstamps>
+    </comp>
+    <comp ref="LED1">
+      <value>WS2812B_SK6805_1515</value>
+      <footprint>Esp32-C3:SK6805_1515</footprint>
+      <fields>
+        <field name="LCSC">C2890035</field>
+      </fields>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="WS2812B_SK6805_1515" description=""/>
+      <property name="LCSC" value="C2890035"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e4532b9a-d29b-4eb0-8e2d-42b01c4fe2cf</tstamps>
+    </comp>
+    <comp ref="P1">
+      <value>Charging</value>
+      <footprint>Ahsan Libs:LED_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C72041</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="LCSC" value="C72041"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="Light emitting diode"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>108af144-3569-4d18-9806-af5cdab6dc61</tstamps>
+    </comp>
+    <comp ref="P2">
+      <value>Charged</value>
+      <footprint>Ahsan Libs:LED_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C72041</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="LCSC" value="C72041"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="Light emitting diode"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>98e3faa1-a221-4709-aa72-0aea92b4bf29</tstamps>
+    </comp>
+    <comp ref="Q1">
+      <value>BOOT</value>
+      <footprint>Ahsan Libs:SW-SMD-TS-1088-AR02016</footprint>
+      <fields>
+        <field name="LCSC">C720477</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="LCSC" value="C720477"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3897052b-7bbb-4f35-a9f1-14d005b9a0a3</tstamps>
+    </comp>
+    <comp ref="Q2">
+      <value>RESET</value>
+      <footprint>Ahsan Libs:SW-SMD-TS-1088-AR02016</footprint>
+      <fields>
+        <field name="LCSC">C720477</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="LCSC" value="C720477"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b112c35c-2524-46a7-b1de-2cfba8490e7d</tstamps>
+    </comp>
+    <comp ref="Q4">
+      <value>AO3401A</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf</datasheet>
+      <fields>
+        <field name="LCSC">C15127</field>
+      </fields>
+      <libsource lib="Transistor_FET" part="AO3401A" description="-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23"/>
+      <property name="LCSC" value="C15127"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23"/>
+      <property name="ki_keywords" value="P-Channel MOSFET"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3d7fc8b2-4bbd-42ca-b126-8132935cea1d</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>10K</value>
+      <footprint>Ahsan Libs:R_0402_1005Metric</footprint>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="RESISTOR_0402NO" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cae5bc4b-a7ac-4f44-a2f2-ff92d521be36</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>10K</value>
+      <footprint>Ahsan Libs:R_0402_1005Metric</footprint>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="RESISTOR_0402NO" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>183d437c-d1ca-4530-b487-1c4cf74f6247</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>0</value>
+      <footprint>Ahsan Libs:R_0402_1005Metric</footprint>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="RESISTOR_0402NO" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c607c265-e7b6-40f8-9c69-4dd8be3957f8</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>1k</value>
+      <footprint>Ahsan Libs:R_0402_1005Metric</footprint>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="RESISTOR_0402NO" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3205ad21-6943-4f85-86f1-26fc60ff2fc2</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>5.1k</value>
+      <footprint>Ahsan Libs:R_0402_1005Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>79e19e42-926e-4fff-b768-7628122db916</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>5.1k</value>
+      <footprint>Ahsan Libs:R_0402_1005Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>09699082-6ece-4013-91ae-c7ea4884e57a</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>10K</value>
+      <footprint>Ahsan Libs:R_0402_1005Metric</footprint>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="RESISTOR_TWO6MIL" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9a22acca-72ad-4c80-b5a5-60ff67d404fb</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>806K</value>
+      <footprint>Ahsan Libs:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C23250</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C23250"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7a576056-24d6-4254-9653-d724c8e01f74</tstamps>
+    </comp>
+    <comp ref="R13">
+      <value>2K</value>
+      <footprint>Ahsan Libs:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3c93d3fd-09a7-4d84-89b8-f73dd4478989</tstamps>
+    </comp>
+    <comp ref="R14">
+      <value>470</value>
+      <footprint>Ahsan Libs:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5e6690f2-5f99-490e-9780-524814efa702</tstamps>
+    </comp>
+    <comp ref="R15">
+      <value>470</value>
+      <footprint>Ahsan Libs:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2e7901fa-21fe-4b4a-be9e-3488a47cf387</tstamps>
+    </comp>
+    <comp ref="R19">
+      <value>470</value>
+      <footprint>Ahsan Libs:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8559b340-cb5f-43bd-9553-ef48271d7da5</tstamps>
+    </comp>
+    <comp ref="R20">
+      <value>220k</value>
+      <footprint>Ahsan Libs:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="LCSC"> </field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value=" "/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>843cce41-e660-4fd0-a370-37fa49b87b71</tstamps>
+    </comp>
+    <comp ref="R21">
+      <value>220k</value>
+      <footprint>Ahsan Libs:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="LCSC"> </field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value=" "/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9d088b61-4784-4d34-b7b8-e0d5b5c0380f</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>AP2112K-3.3</value>
+      <footprint>Ahsan Libs:SOT-25-5_L3.0-W1.8-P0.95-LS3.0-BR</footprint>
+      <datasheet>https://www.diodes.com/assets/Datasheets/AP2112.pdf</datasheet>
+      <libsource lib="Regulator_Linear" part="AP2112K-3.3" description="600mA low dropout linear regulator, with enable pin, 3.8V-6V input voltage range, 3.3V fixed positive output, SOT-23-5"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="600mA low dropout linear regulator, with enable pin, 3.8V-6V input voltage range, 3.3V fixed positive output, SOT-23-5"/>
+      <property name="ki_keywords" value="linear regulator ldo fixed positive"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>94237b7f-48ef-4821-be48-529ac99fe9ea</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>ESP32-C3FH4</value>
+      <footprint>Esp32-C3:QFN32_5MM</footprint>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="ESP32-C3FH4" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>782f319b-665b-4928-b52d-f903dbe851e7</tstamps>
+    </comp>
+    <comp ref="U5">
+      <value>MCP73831-2-OT</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
+      <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf</datasheet>
+      <libsource lib="Battery_Management" part="MCP73831-2-OT" description="Single cell, Li-Ion/Li-Po charge management controller, 4.20V, Tri-State Status Output, in SOT23-5 package"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="Single cell, Li-Ion/Li-Po charge management controller, 4.20V, Tri-State Status Output, in SOT23-5 package"/>
+      <property name="ki_keywords" value="battery charger lithium"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>987b3c98-5443-4619-b5d3-44fd991133f3</tstamps>
+    </comp>
+    <comp ref="USB1">
+      <value>USB_C_Receptacle_USB2.0</value>
+      <footprint>Ahsan Libs:USB_C_Receptacle_HRO_TYPE-C-31-M-12</footprint>
+      <datasheet>https://www.usb.org/sites/default/files/documents/usb_type-c.zip</datasheet>
+      <libsource lib="Connector" part="USB_C_Receptacle_USB2.0" description="USB 2.0-only Type-C Receptacle connector"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="USB 2.0-only Type-C Receptacle connector"/>
+      <property name="ki_keywords" value="usb universal serial bus type-C USB2.0"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>01291839-75c0-402d-94e1-43adcd93c568</tstamps>
+    </comp>
+    <comp ref="X1">
+      <value>2.4GHz</value>
+      <footprint>Esp32-C3:ANT_2450AT18B100</footprint>
+      <fields>
+        <field name="LCSC">C89334</field>
+      </fields>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="ANTENNA_JOHANSON_2450AT18B100" description=""/>
+      <property name="LCSC" value="C89334"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bd3881c4-9624-41ac-96aa-b7d5070eaad5</tstamps>
+    </comp>
+    <comp ref="Y1">
+      <value>40MHz</value>
+      <footprint>Crystal:Crystal_SMD_2016-4Pin_2.0x1.6mm</footprint>
+      <fields>
+        <field name="LCSC">C501798</field>
+      </fields>
+      <libsource lib="Device" part="Crystal_GND24" description="Four pin crystal, GND on pins 2 and 4"/>
+      <property name="LCSC" value="C501798"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Adafruit QT Py ESP32-C3.kicad_sch"/>
+      <property name="ki_description" value="Four pin crystal, GND on pins 2 and 4"/>
+      <property name="ki_keywords" value="quartz ceramic resonator oscillator"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e36753af-045b-45e7-91ba-d4a5610ad08e</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>0.1uF</value>
+      <footprint>Ahsan Libs:C_0402_1005Metric</footprint>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="CAP_CERAMIC_0402NO" description=""/>
+      <property name="Sheetname" value="BME680 Module"/>
+      <property name="Sheetfile" value="BME680 Module.kicad_sch"/>
+      <sheetpath names="/BME680 Module/" tstamps="/45f49680-9ad6-4ee5-9cbe-6fd86a0c854f/"/>
+      <tstamps>cf4987ec-e6f5-42be-8130-26c336c1d2cf</tstamps>
+    </comp>
+    <comp ref="C12">
+      <value>0.1uF</value>
+      <footprint>Ahsan Libs:C_0402_1005Metric</footprint>
+      <libsource lib="Adafruit QT Py ESP32-C3-eagle-import" part="CAP_CERAMIC_0402NO" description=""/>
+      <property name="Sheetname" value="BME680 Module"/>
+      <property name="Sheetfile" value="BME680 Module.kicad_sch"/>
+      <sheetpath names="/BME680 Module/" tstamps="/45f49680-9ad6-4ee5-9cbe-6fd86a0c854f/"/>
+      <tstamps>8cae51ed-4b09-4894-9734-7b3fced1f8e0</tstamps>
+    </comp>
+    <comp ref="R22">
+      <value>4.7k</value>
+      <footprint>Ahsan Libs:R_0402_1005Metric</footprint>
+      <libsource lib="Adafruit BME680 Original-eagle-import" part="RESISTOR_0603_NOOUT" description=""/>
+      <property name="Sheetname" value="BME680 Module"/>
+      <property name="Sheetfile" value="BME680 Module.kicad_sch"/>
+      <sheetpath names="/BME680 Module/" tstamps="/45f49680-9ad6-4ee5-9cbe-6fd86a0c854f/"/>
+      <tstamps>51a8b23d-6201-4d73-9d3a-3a67fcd1133f</tstamps>
+    </comp>
+    <comp ref="R23">
+      <value>4.7k</value>
+      <footprint>Ahsan Libs:R_0402_1005Metric</footprint>
+      <libsource lib="Adafruit BME680 Original-eagle-import" part="RESISTOR_0603_NOOUT" description=""/>
+      <property name="Sheetname" value="BME680 Module"/>
+      <property name="Sheetfile" value="BME680 Module.kicad_sch"/>
+      <sheetpath names="/BME680 Module/" tstamps="/45f49680-9ad6-4ee5-9cbe-6fd86a0c854f/"/>
+      <tstamps>4892c28d-144e-4751-b3de-33eb7b5e3304</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>BME680</value>
+      <footprint>Ahsan Libs:BME680-LGA-8_L3.0-W3.0-P0.80-TR</footprint>
+      <fields>
+        <field name="LCSC">C125972</field>
+      </fields>
+      <libsource lib="Adafruit BME680 Original-eagle-import" part="BME680" description=""/>
+      <property name="LCSC" value="C125972"/>
+      <property name="Sheetname" value="BME680 Module"/>
+      <property name="Sheetfile" value="BME680 Module.kicad_sch"/>
+      <sheetpath names="/BME680 Module/" tstamps="/45f49680-9ad6-4ee5-9cbe-6fd86a0c854f/"/>
+      <tstamps>5658e506-80ff-42ea-819b-59df9f02f165</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Adafruit BME680 Original-eagle-import" part="BME680">
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Footprint">Adafruit BME680 Original:BME680</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="CSB" type="input"/>
+        <pin num="3" name="SDI" type="input"/>
+        <pin num="4" name="SCK" type="input"/>
+        <pin num="5" name="SDO" type="output"/>
+        <pin num="6" name="VDDIO" type="power_in"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Adafruit BME680 Original-eagle-import" part="RESISTOR_0603_NOOUT">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Footprint">Adafruit BME680 Original:0603-NO</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Adafruit QT Py ESP32-C3-eagle-import" part="ANTENNA_JOHANSON_2450AT18B100">
+      <fields>
+        <field name="Reference">X</field>
+        <field name="Value">ANTENNA_JOHANSON_2450AT18B100</field>
+        <field name="Footprint">Adafruit QT Py ESP32-C3:ANT_2450AT18B100</field>
+      </fields>
+      <pins>
+        <pin num="FP" name="P$1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Adafruit QT Py ESP32-C3-eagle-import" part="CAP_CERAMIC0805-NOOUTLINE">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CAP_CERAMIC0805-NOOUTLINE</field>
+        <field name="Footprint">Adafruit QT Py ESP32-C3:0805-NO</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Adafruit QT Py ESP32-C3-eagle-import" part="CAP_CERAMIC_0402NO">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CAP_CERAMIC_0402NO</field>
+        <field name="Footprint">Adafruit QT Py ESP32-C3:_0402NO</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Adafruit QT Py ESP32-C3-eagle-import" part="DIODE_SOD323MINI">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">DIODE_SOD323MINI</field>
+        <field name="Footprint">Adafruit QT Py ESP32-C3:SOD-323_MINI</field>
+      </fields>
+      <pins>
+        <pin num="A" name="A" type="passive"/>
+        <pin num="C" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Adafruit QT Py ESP32-C3-eagle-import" part="ESP32-C3FH4">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ESP32-C3FH4</field>
+        <field name="Footprint">Adafruit QT Py ESP32-C3:QFN32_5MM</field>
+      </fields>
+      <pins>
+        <pin num="1" name="LNA_IN" type="bidirectional"/>
+        <pin num="2" name="VDD3P3" type="power_in"/>
+        <pin num="3" name="VDD3P3" type="power_in"/>
+        <pin num="4" name="GPIO0/XTAL_32K+" type="bidirectional"/>
+        <pin num="5" name="GPIO1/XTAL_32K-" type="bidirectional"/>
+        <pin num="6" name="GPIO2" type="bidirectional"/>
+        <pin num="7" name="CHIP_EN" type="input"/>
+        <pin num="8" name="GPIO3" type="bidirectional"/>
+        <pin num="9" name="MTMS/GPIO4" type="bidirectional"/>
+        <pin num="10" name="MTDI/GPIO5" type="bidirectional"/>
+        <pin num="11" name="VDD3P3_RTC" type="power_in"/>
+        <pin num="12" name="MTCK/GPIO6" type="bidirectional"/>
+        <pin num="13" name="MTDO/GPIO7" type="bidirectional"/>
+        <pin num="14" name="GPIO8" type="bidirectional"/>
+        <pin num="15" name="BOOT/GPIO9" type="bidirectional"/>
+        <pin num="16" name="GPIO10" type="bidirectional"/>
+        <pin num="17" name="VDD3P3_CPU" type="power_in"/>
+        <pin num="18" name="VDD_SPI" type="power_in"/>
+        <pin num="19" name="SPIHD" type="no_connect"/>
+        <pin num="20" name="SPIWP" type="no_connect"/>
+        <pin num="21" name="SPICS0" type="no_connect"/>
+        <pin num="22" name="SPICLK" type="no_connect"/>
+        <pin num="23" name="SPID" type="no_connect"/>
+        <pin num="24" name="SPIQ" type="no_connect"/>
+        <pin num="25" name="GPIO18" type="bidirectional"/>
+        <pin num="26" name="GPIO19" type="bidirectional"/>
+        <pin num="27" name="U0RXD/GPIO20" type="bidirectional"/>
+        <pin num="28" name="U0TXD/GPIO21" type="bidirectional"/>
+        <pin num="29" name="XTAL_N" type="output"/>
+        <pin num="30" name="XTAL_P" type="input"/>
+        <pin num="31" name="VDDA" type="power_in"/>
+        <pin num="32" name="VDDA" type="power_in"/>
+        <pin num="33" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Adafruit QT Py ESP32-C3-eagle-import" part="INDUCTOR_0402">
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">INDUCTOR_0402</field>
+        <field name="Footprint">Adafruit QT Py ESP32-C3:_0402</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Adafruit QT Py ESP32-C3-eagle-import" part="RESISTOR_0402NO">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RESISTOR_0402NO</field>
+        <field name="Footprint">Adafruit QT Py ESP32-C3:_0402NO</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Adafruit QT Py ESP32-C3-eagle-import" part="RESISTOR_TWO6MIL">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RESISTOR_TWO6MIL</field>
+        <field name="Footprint">Adafruit QT Py ESP32-C3:_0603MP_TWO6MIL</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Adafruit QT Py ESP32-C3-eagle-import" part="WS2812B_SK6805_1515">
+      <fields>
+        <field name="Reference">LED</field>
+        <field name="Value">WS2812B_SK6805_1515</field>
+        <field name="Footprint">Adafruit QT Py ESP32-C3:SK6805_1515</field>
+      </fields>
+      <pins>
+        <pin num="1" name="DI" type="input"/>
+        <pin num="2" name="VDD" type="power_in"/>
+        <pin num="3" name="DO" type="output"/>
+        <pin num="4" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Battery_Management" part="MCP73831-2-OT">
+      <description>Single cell, Li-Ion/Li-Po charge management controller, 4.20V, Tri-State Status Output, in SOT23-5 package</description>
+      <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP73831-2-OT</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet">http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="STAT" type="output"/>
+        <pin num="2" name="V_{SS}" type="power_in"/>
+        <pin num="3" name="V_{BAT}" type="power_out"/>
+        <pin num="4" name="V_{DD}" type="power_in"/>
+        <pin num="5" name="PROG" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Screw_Terminal_01x01">
+      <description>Generic screw terminal, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TerminalBlock*:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Screw_Terminal_01x01</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Screw_Terminal_01x03">
+      <description>Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TerminalBlock*:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Screw_Terminal_01x03</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="USB_C_Receptacle_USB2.0">
+      <description>USB 2.0-only Type-C Receptacle connector</description>
+      <docs>https://www.usb.org/sites/default/files/documents/usb_type-c.zip</docs>
+      <footprints>
+        <fp>USB*C*Receptacle*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">USB_C_Receptacle_USB2.0</field>
+        <field name="Datasheet">https://www.usb.org/sites/default/files/documents/usb_type-c.zip</field>
+      </fields>
+      <pins>
+        <pin num="A1" name="GND" type="passive"/>
+        <pin num="A4" name="VBUS" type="passive"/>
+        <pin num="A5" name="CC1" type="bidirectional"/>
+        <pin num="A6" name="D+" type="bidirectional"/>
+        <pin num="A7" name="D-" type="bidirectional"/>
+        <pin num="A8" name="SBU1" type="bidirectional"/>
+        <pin num="A9" name="VBUS" type="passive"/>
+        <pin num="A12" name="GND" type="passive"/>
+        <pin num="B1" name="GND" type="passive"/>
+        <pin num="B4" name="VBUS" type="passive"/>
+        <pin num="B5" name="CC2" type="bidirectional"/>
+        <pin num="B6" name="D+" type="bidirectional"/>
+        <pin num="B7" name="D-" type="bidirectional"/>
+        <pin num="B8" name="SBU2" type="bidirectional"/>
+        <pin num="B9" name="VBUS" type="passive"/>
+        <pin num="B12" name="GND" type="passive"/>
+        <pin num="S1" name="SHIELD" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Buzzer">
+      <description>Buzzer, polarized</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>*Buzzer*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">BZ</field>
+        <field name="Value">Buzzer</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="-" type="passive"/>
+        <pin num="2" name="+" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Crystal_GND24">
+      <description>Four pin crystal, GND on pins 2 and 4</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Crystal*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Y</field>
+        <field name="Value">Crystal_GND24</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Schottky">
+      <description>Schottky diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Schottky</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Linear" part="AP2112K-3.3">
+      <description>600mA low dropout linear regulator, with enable pin, 3.8V-6V input voltage range, 3.3V fixed positive output, SOT-23-5</description>
+      <docs>https://www.diodes.com/assets/Datasheets/AP2112.pdf</docs>
+      <footprints>
+        <fp>SOT?23?5*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AP2112K-3.3</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet">https://www.diodes.com/assets/Datasheets/AP2112.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VIN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="NC" type="no_connect"/>
+        <pin num="5" name="VOUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_Push">
+      <description>Push button switch, generic, two pins</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_FET" part="AO3401A">
+      <description>-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23</description>
+      <docs>http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">AO3401A</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet">http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Battery_Management">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Battery_Management.kicad_sym</uri>
+    </library>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Connector.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="Regulator_Linear">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Regulator_Linear.kicad_sym</uri>
+    </library>
+    <library logical="Switch">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Switch.kicad_sym</uri>
+    </library>
+    <library logical="Transistor_FET">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Transistor_FET.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+5V">
+      <node ref="C24" pin="1" pintype="passive"/>
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D5" pin="C" pinfunction="C" pintype="passive"/>
+      <node ref="Q4" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="R14" pin="1" pintype="passive"/>
+      <node ref="R19" pin="1" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="U5" pin="4" pinfunction="V_{DD}" pintype="power_in"/>
+    </net>
+    <net code="2" name="+BATT">
+      <node ref="C25" pin="1" pintype="passive"/>
+      <node ref="Q4" pin="3" pinfunction="D" pintype="passive"/>
+      <node ref="R20" pin="2" pintype="passive"/>
+      <node ref="U5" pin="3" pinfunction="V_{BAT}" pintype="power_out"/>
+    </net>
+    <net code="3" name="/A0">
+      <node ref="R20" pin="1" pintype="passive"/>
+      <node ref="R21" pin="1" pintype="passive"/>
+      <node ref="U2" pin="9" pinfunction="MTMS/GPIO4" pintype="bidirectional"/>
+    </net>
+    <net code="4" name="/A1">
+      <node ref="J17" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="U2" pin="8" pinfunction="GPIO3" pintype="bidirectional"/>
+    </net>
+    <net code="5" name="/A2">
+      <node ref="BZ1" pin="1" pinfunction="-" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="GPIO1/XTAL_32K-" pintype="bidirectional"/>
+    </net>
+    <net code="6" name="/A3">
+      <node ref="U2" pin="4" pinfunction="GPIO0/XTAL_32K+" pintype="bidirectional"/>
+    </net>
+    <net code="7" name="/BOOT">
+      <node ref="Q1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U2" pin="15" pinfunction="BOOT/GPIO9" pintype="bidirectional"/>
+    </net>
+    <net code="8" name="/LNA">
+      <node ref="C7" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="L2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="LNA_IN" pintype="bidirectional"/>
+    </net>
+    <net code="9" name="/MISO">
+      <node ref="R7" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U2" pin="14" pinfunction="GPIO8" pintype="bidirectional"/>
+    </net>
+    <net code="10" name="/MOSI">
+      <node ref="U2" pin="13" pinfunction="MTDO/GPIO7" pintype="bidirectional"/>
+    </net>
+    <net code="11" name="/NEOPIX{slash}RX">
+      <node ref="LED1" pin="1" pinfunction="DI" pintype="input"/>
+      <node ref="U2" pin="27" pinfunction="U0RXD/GPIO20" pintype="bidirectional"/>
+    </net>
+    <net code="12" name="/SCK">
+      <node ref="U2" pin="16" pinfunction="GPIO10" pintype="bidirectional"/>
+    </net>
+    <net code="13" name="/TX">
+      <node ref="R4" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="14" name="/VDD3P3">
+      <node ref="L1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="VDD3P3" pintype="power_in"/>
+      <node ref="U2" pin="3" pinfunction="VDD3P3" pintype="power_in"/>
+    </net>
+    <net code="15" name="/VDD_SPI">
+      <node ref="C11" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U2" pin="18" pinfunction="VDD_SPI" pintype="power_in"/>
+    </net>
+    <net code="16" name="/~{RESET}">
+      <node ref="C3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="Q2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U2" pin="7" pinfunction="CHIP_EN" pintype="input"/>
+    </net>
+    <net code="17" name="3.3V">
+      <node ref="C10" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C12" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C14" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C15" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C16" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C4" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C5" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C6" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="J17" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="L1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="LED1" pin="2" pinfunction="VDD" pintype="power_in"/>
+      <node ref="R1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R22" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R23" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R7" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="VOUT" pintype="power_out"/>
+      <node ref="U2" pin="11" pinfunction="VDD3P3_RTC" pintype="power_in"/>
+      <node ref="U2" pin="17" pinfunction="VDD3P3_CPU" pintype="power_in"/>
+      <node ref="U2" pin="31" pinfunction="VDDA" pintype="power_in"/>
+      <node ref="U2" pin="32" pinfunction="VDDA" pintype="power_in"/>
+      <node ref="U3" pin="2" pinfunction="CSB" pintype="input"/>
+      <node ref="U3" pin="6" pinfunction="VDDIO" pintype="power_in"/>
+      <node ref="U3" pin="8" pinfunction="VDD" pintype="power_in"/>
+    </net>
+    <net code="18" name="DN">
+      <node ref="U2" pin="25" pinfunction="GPIO18" pintype="bidirectional"/>
+      <node ref="USB1" pin="A7" pinfunction="D-" pintype="bidirectional"/>
+      <node ref="USB1" pin="B7" pinfunction="D-" pintype="bidirectional"/>
+    </net>
+    <net code="19" name="DP">
+      <node ref="U2" pin="26" pinfunction="GPIO19" pintype="bidirectional"/>
+      <node ref="USB1" pin="A6" pinfunction="D+" pintype="bidirectional"/>
+      <node ref="USB1" pin="B6" pinfunction="D+" pintype="bidirectional"/>
+    </net>
+    <net code="20" name="GND">
+      <node ref="BZ1" pin="2" pinfunction="+" pintype="passive"/>
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C10" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C11" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C12" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C14" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C15" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C16" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C17" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C18" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C24" pin="2" pintype="passive"/>
+      <node ref="C25" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C4" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C5" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C6" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C7" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="C9" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="Green2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J17" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="LED1" pin="4" pinfunction="GND" pintype="power_in"/>
+      <node ref="Q1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="Q2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+      <node ref="R15" pin="2" pintype="passive"/>
+      <node ref="R21" pin="2" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="33" pinfunction="GND" pintype="power_in"/>
+      <node ref="U3" pin="1" pinfunction="GND" pintype="power_in"/>
+      <node ref="U3" pin="5" pinfunction="SDO" pintype="output"/>
+      <node ref="U3" pin="7" pinfunction="GND" pintype="power_in"/>
+      <node ref="U5" pin="2" pinfunction="V_{SS}" pintype="power_in"/>
+      <node ref="USB1" pin="A1" pinfunction="GND" pintype="passive"/>
+      <node ref="USB1" pin="A12" pinfunction="GND" pintype="passive"/>
+      <node ref="USB1" pin="B1" pinfunction="GND" pintype="passive"/>
+      <node ref="USB1" pin="B12" pinfunction="GND" pintype="passive"/>
+      <node ref="USB1" pin="S1" pinfunction="SHIELD" pintype="passive"/>
+      <node ref="Y1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="Y1" pin="4" pinfunction="4" pintype="passive"/>
+    </net>
+    <net code="21" name="Net-(C18-Pad1)">
+      <node ref="C18" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="Y1" pin="3" pinfunction="3" pintype="passive"/>
+    </net>
+    <net code="22" name="Net-(D1-K)">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="Q4" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="VIN" pintype="power_in"/>
+      <node ref="U1" pin="3" pinfunction="EN" pintype="input"/>
+    </net>
+    <net code="23" name="Net-(Green2-A)">
+      <node ref="Green2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R19" pin="2" pintype="passive"/>
+    </net>
+    <net code="24" name="Net-(P1-A)">
+      <node ref="P1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+    </net>
+    <net code="25" name="Net-(P1-K)">
+      <node ref="P1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="P2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U5" pin="1" pinfunction="STAT" pintype="output"/>
+    </net>
+    <net code="26" name="Net-(P2-K)">
+      <node ref="P2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R15" pin="1" pintype="passive"/>
+    </net>
+    <net code="27" name="Net-(U2-GPIO2)">
+      <node ref="R2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="GPIO2" pintype="bidirectional"/>
+    </net>
+    <net code="28" name="Net-(U2-U0TXD{slash}GPIO21)">
+      <node ref="R4" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U2" pin="28" pinfunction="U0TXD/GPIO21" pintype="bidirectional"/>
+    </net>
+    <net code="29" name="Net-(U2-XTAL_N)">
+      <node ref="R3" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U2" pin="29" pinfunction="XTAL_N" pintype="output"/>
+    </net>
+    <net code="30" name="Net-(U2-XTAL_P)">
+      <node ref="C17" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U2" pin="30" pinfunction="XTAL_P" pintype="input"/>
+      <node ref="Y1" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="31" name="Net-(U5-PROG)">
+      <node ref="R13" pin="1" pintype="passive"/>
+      <node ref="U5" pin="5" pinfunction="PROG" pintype="input"/>
+    </net>
+    <net code="32" name="Net-(USB1-CC1)">
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="USB1" pin="A5" pinfunction="CC1" pintype="bidirectional"/>
+    </net>
+    <net code="33" name="Net-(USB1-CC2)">
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="USB1" pin="B5" pinfunction="CC2" pintype="bidirectional"/>
+    </net>
+    <net code="34" name="Net-(X1-P$1)">
+      <node ref="C9" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="L2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="X1" pin="FP" pinfunction="P$1" pintype="passive"/>
+    </net>
+    <net code="35" name="SCL">
+      <node ref="R22" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U2" pin="12" pinfunction="MTCK/GPIO6" pintype="bidirectional"/>
+      <node ref="U3" pin="4" pinfunction="SCK" pintype="input"/>
+    </net>
+    <net code="36" name="SDA">
+      <node ref="R23" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U2" pin="10" pinfunction="MTDI/GPIO5" pintype="bidirectional"/>
+      <node ref="U3" pin="3" pinfunction="SDI" pintype="input"/>
+    </net>
+    <net code="37" name="VBUS">
+      <node ref="D5" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="USB1" pin="A4" pinfunction="VBUS" pintype="passive"/>
+      <node ref="USB1" pin="A9" pinfunction="VBUS" pintype="passive"/>
+      <node ref="USB1" pin="B4" pinfunction="VBUS" pintype="passive"/>
+      <node ref="USB1" pin="B9" pinfunction="VBUS" pintype="passive"/>
+    </net>
+    <net code="38" name="unconnected-(LED1-DO-Pad3)">
+      <node ref="LED1" pin="3" pinfunction="DO" pintype="output+no_connect"/>
+    </net>
+    <net code="39" name="unconnected-(U1-NC-Pad4)">
+      <node ref="U1" pin="4" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="40" name="unconnected-(U2-SPICLK-Pad22)">
+      <node ref="U2" pin="22" pinfunction="SPICLK" pintype="no_connect"/>
+    </net>
+    <net code="41" name="unconnected-(U2-SPICS0-Pad21)">
+      <node ref="U2" pin="21" pinfunction="SPICS0" pintype="no_connect"/>
+    </net>
+    <net code="42" name="unconnected-(U2-SPID-Pad23)">
+      <node ref="U2" pin="23" pinfunction="SPID" pintype="no_connect"/>
+    </net>
+    <net code="43" name="unconnected-(U2-SPIHD-Pad19)">
+      <node ref="U2" pin="19" pinfunction="SPIHD" pintype="no_connect"/>
+    </net>
+    <net code="44" name="unconnected-(U2-SPIQ-Pad24)">
+      <node ref="U2" pin="24" pinfunction="SPIQ" pintype="no_connect"/>
+    </net>
+    <net code="45" name="unconnected-(U2-SPIWP-Pad20)">
+      <node ref="U2" pin="20" pinfunction="SPIWP" pintype="no_connect"/>
+    </net>
+    <net code="46" name="unconnected-(USB1-SBU1-PadA8)">
+      <node ref="USB1" pin="A8" pinfunction="SBU1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="47" name="unconnected-(USB1-SBU2-PadB8)">
+      <node ref="USB1" pin="B8" pinfunction="SBU2" pintype="bidirectional+no_connect"/>
+    </net>
+  </nets>
+</export>

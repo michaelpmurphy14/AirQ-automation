@@ -1,0 +1,12 @@
+(footprint "QTPYC3_BOT" (version 20211014) (generator pcbnew)
+  (layer "F.Cu")
+  (tedit 0)
+  (fp_text reference "REF**" (at 0 0) (layer "F.SilkS") hide
+    (effects (font (size 1.27 1.27) (thickness 0.15)) (justify left top))
+    (tstamp 91e0bc72-ea96-47f0-94a3-41cd32c4428a)
+  )
+  (fp_text value "" (at 0 0) (layer "F.Fab") hide
+    (effects (font (size 1.27 1.27) (thickness 0.15)) (justify left top))
+    (tstamp 59104bc4-572c-4ad0-8e32-54432b8681a6)
+  )
+)

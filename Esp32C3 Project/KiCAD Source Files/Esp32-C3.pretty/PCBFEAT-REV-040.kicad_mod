@@ -1,0 +1,18 @@
+(footprint "PCBFEAT-REV-040" (version 20211014) (generator pcbnew)
+  (layer "F.Cu")
+  (tedit 0)
+  (descr "<b>Revision Level Field</b> - 40 mil<p>\nSet version with global board attribute '>REV'")
+  (fp_text reference "REF**" (at 0 0) (layer "F.SilkS") hide
+    (effects (font (size 1.27 1.27) (thickness 0.15)) (justify left top))
+    (tstamp a6016fde-ae0f-4c21-9ca8-73d599017607)
+  )
+  (fp_text value "" (at 0 0) (layer "F.Fab") hide
+    (effects (font (size 1.27 1.27) (thickness 0.15)) (justify left top))
+    (tstamp 9e42e168-aad6-441e-a5c1-52b1d2f60ece)
+  )
+  (fp_text user ">REV" (at -0.3556 0.508) (layer "F.SilkS")
+    (effects (font (size 0.8128 0.8128) (thickness 0.2032)) (justify right bottom))
+    (tstamp 1e2f17e5-d8ca-410b-a27c-bbb1abdf1aa5)
+  )
+  (fp_circle (center 0 0) (end 0.898 0) (layer "F.SilkS") (width 0.3048) (fill none) (tstamp a498a505-b661-43fc-90e1-8add3077d651))
+)
