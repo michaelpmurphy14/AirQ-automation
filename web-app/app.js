@@ -76,10 +76,10 @@ function handleSensorData(event) {
     sensorDataContainer.textContent = sensorValue;
 }
 
-// Handle CO Level
+// Handle CO Data
 function handleCOLevel(event) {
     let COValue = new TextDecoder().decode(event.target.value);
-    batteryLevelContainer.textContent = COValue + ' PPM';
+    coLevelContainer.textContent = COValue + ' PPM'; // This should update the CO level, not the battery level
 }
 
 // Handle Battery Level
