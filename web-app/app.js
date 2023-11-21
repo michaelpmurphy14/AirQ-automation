@@ -49,7 +49,7 @@ connectButton.addEventListener('click', async () => {
 
         await startNotifications(combinedSensorCharacteristic, handleCombinedSensorData);
         await startNotifications(batteryCharacteristic, handleBatteryLevel);
-        await startNotifications(coCharacteristic, handleCOData);
+        await startNotifications(coCharacteristic, handleCOLevel);
     } catch (error) {
         console.log('Argh! ' + error);
     }
@@ -72,20 +72,23 @@ disconnectButton.addEventListener('click', () => {
 
 // Handle Combined Sensor Data (Temperature and VOC)
 function handleCombinedSensorData(event) {
-    let combinedData = new TextDecoder().decode(event.target.value);
-    if (combinedData) {
-        let dataParts = combinedData.split(","); // Assuming data is comma-separated
-        temperatureDataContainer.textContent = dataParts[0];
-        vocDataContainer.textContent = dataParts[1];
+    let sensorValues = new TextDecoder().decode(event.target.value).split(',');
+    if (sensorValues.length >= 2) {
+        let temperature = sensorValues[0] + " °C";
+        let vocResistance = sensorValues[1] + " ohms";
+        // Update the DOM elements
+        document.getElementById('temperatureData').textContent = temperature;
+        document.getElementById('vocData').textContent = vocResistance;
     } else {
-        console.log("Received undefined combined sensor data");
+        console.log('Invalid sensor data received:', sensorValues);
     }
 }
 
 // Handle CO Data
-function handleCOData(event) {
+function handleCOLevel(event) {
     let coValue = new TextDecoder().decode(event.target.value);
-    coDataContainer.textContent = coValue;
+    // Assuming the CO value is sent as a plain numeric value
+    document.getElementById('coData').textContent = coValue + " ppm";
 }
 
 // Handle Battery Level
