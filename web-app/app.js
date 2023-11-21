@@ -85,13 +85,15 @@ function handleCombinedSensorData(event) {
     let temperatureData = dataParts[0].split(':')[1]; // "XX.X°C"
     document.getElementById('temperatureData').textContent = temperatureData;
 
-    // Extract and update CO level data
-    let coData = dataParts[1].split(':')[1]; // "YY ppm"
-    document.getElementById('coData').textContent = coData;
-
     // Extract and update VOC level data
     let vocData = dataParts[2].split(':')[1]; // "ZZ ohms"
     document.getElementById('vocData').textContent = vocData;
+}
+
+// Handle CO Data
+function handleCOData(event) {
+    let coValue = new TextDecoder().decode(event.target.value);
+    coLevelContainer.textContent = coValue + ' PPM';
 }
 
 // Handle Battery Level
