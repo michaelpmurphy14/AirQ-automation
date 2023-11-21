@@ -1,119 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>ESP32 Web Bluetooth</title>
+    <meta charset="UTF-8">
+    <title>Air Quality Monitor</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #sensorData { margin-top: 20px; }
+        .button { margin-top: 10px; }
+    </style>
 </head>
 <body>
-    <h1>ESP32 Sensor Data and Control</h1>
-    <button id="connect">Connect to ESP32</button>
-    <button id="disconnect" disabled>Disconnect</button>
-    <h2>Sensor Data</h2>
-    <div id="sensorData">Waiting for data...</div>
-    <h2>Battery Data</h2>
-    <div id="batteryData">Waiting for battery data...</div>
-    <h2>Controls</h2>
-    <button id="toggleBuzzer">Toggle Buzzer</button>
-    <button id="setNeopixelRed">Set Neopixel Red</button>
-    <button id="setNeopixelGreen">Set Neopixel Green</button>
-    <button id="setNeopixelBlue">Set Neopixel Blue</button>
-    <button id="setNeopixelOff">Turn Neopixel Off</button>
+    <h1>Air Quality Monitor</h1>
+    <button id="connectButton">Connect</button>
+    <button id="disconnectButton" disabled>Disconnect</button>
+
+    <div id="sensorData">
+        <p id="gasResistance">Gas Resistance: -</p>
+        <p id="batteryLevel">Battery Level: -</p>
+    </div>
+
+    <div>
+        <button class="button" id="ledRed">Red LED</button>
+        <button class="button" id="ledGreen">Green LED</button>
+        <button class="button" id="ledBlue">Blue LED</button>
+        <button class="button" id="ledOff">LED Off</button>
+    </div>
+
+    <div>
+        <button class="button" id="buzzerOn">Buzzer On</button>
+        <button class="button" id="buzzerOff">Buzzer Off</button>
+    </div>
 
     <script src="app.js"></script>
 </body>
 </html>
-
-let esp32Device;
-let sensorCharacteristic;
-let batteryCharacteristic;
-let ledCharacteristic;
-let buzzerCharacteristic;
-
-document.getElementById('connect').addEventListener('click', () => {
-    connectToESP32();
-});
-
-document.getElementById('disconnect').addEventListener('click', () => {
-    disconnectFromESP32();
-});
-
-document.getElementById('toggleBuzzer').addEventListener('click', () => {
-    toggleBuzzer();
-});
-
-document.getElementById('setNeopixelRed').addEventListener('click', () => {
-    setNeopixelColor(0xFF0000); // Red
-});
-
-document.getElementById('setNeopixelGreen').addEventListener('click', () => {
-    setNeopixelColor(0x00FF00); // Green
-});
-
-document.getElementById('setNeopixelBlue').addEventListener('click', () => {
-    setNeopixelColor(0x0000FF); // Blue
-});
-
-document.getElementById('setNeopixelOff').addEventListener('click', () => {
-    setNeopixelColor(0x000000); // Off
-});
-
-async function connectToESP32() {
-    try {
-        const options = {
-            filters: [{ namePrefix: 'ESP32' }],
-            optionalServices: ['19b10000-e8f2-537e-4f6c-d104768a1214']
-        };
-
-        console.log('Requesting Bluetooth Device...');
-        esp32Device = await navigator.bluetooth.requestDevice(options);
-        const server = await esp32Device.gatt.connect();
-        const service = await server.getPrimaryService('19b10000-e8f2-537e-4f6c-d104768a1214');
-
-        sensorCharacteristic = await service.getCharacteristic('19b10001-e8f2-537e-4f6c-d104768a1214');
-        batteryCharacteristic = await service.getCharacteristic('19b10004-e8f2-537e-4f6c-d104768a1214');
-        ledCharacteristic = await service.getCharacteristic('19b10002-e8f2-537e-4f6c-d104768a1214');
-        buzzerCharacteristic = await service.getCharacteristic('19b10003-e8f2-537e-4f6c-d104768a1214');
-
-        sensorCharacteristic.startNotifications().then(() => {
-            sensorCharacteristic.addEventListener('characteristicvaluechanged', handleSensorData);
-        });
-
-        batteryCharacteristic.startNotifications().then(() => {
-            batteryCharacteristic.addEventListener('characteristicvaluechanged', handleBatteryData);
-        });
-
-        document.getElementById('connect').disabled = true;
-        document.getElementById('disconnect').disabled = false;
-
-        console.log('Connected to ESP32');
-    } catch (error) {
-        console.log('Error: ' + error);
-    }
-}
-
-function disconnectFromESP32() {
-    if (!esp32Device) return;
-
-    esp32Device.gatt.disconnect();
-    document.getElementById('connect').disabled = false;
-    document.getElementById('disconnect').disabled = true;
-    console.log('Disconnected from ESP32');
-}
-
-function handleSensorData(event) {
-    const sensorData = new TextDecoder().decode(event.target.value);
-    document.getElementById('sensorData').textContent = sensorData;
-}
-
-function handleBatteryData(event) {
-    const batteryData = new TextDecoder().decode(event.target.value);
-    document.getElementById('batteryData').textContent = 'Battery Voltage: ' + batteryData + ' V';
-}
-
-async function toggleBuzzer() {
-    if (!buzzerCharacteristic) return;
-    const value = new Uint8Array([1]);
-    await buzzerCharacteristic.writeValue(value);
-}
-
-async function setNeopixelColor(color) {
-    if
