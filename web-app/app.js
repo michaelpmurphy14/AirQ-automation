@@ -7,21 +7,18 @@ const sensorDataContainer = document.getElementById('sensorData');
 const batteryLevelContainer = document.getElementById('batteryLevel');
 const coLevelContainer = document.getElementById('coData');
 const bleStateContainer = document.getElementById('bleState');
-const vocLevelContainer = document.getElementById('vocLevel');
 
 // BLE Service and Characteristic UUIDs
 const bleServiceUUID = '19b10000-e8f2-537e-4f6c-d104768a1214';
-const sensorCharacteristicUUID = '19b10001-e8f2-537e-4f6c-d104768a1214';
+const combinedCharacteristicUUID = '19b10005-e8f2-537e-4f6c-d104768a1214'; // Updated UUID for combined data
 const batteryCharacteristicUUID = '19b10004-e8f2-537e-4f6c-d104768a1214';
 const buzzerCharacteristicUUID = '19b10003-e8f2-537e-4f6c-d104768a1214';
 const coCharacteristicUUID = '6e400002-b5a3-f393-e0a9-e50e24dcca9e';
-const vocCharacteristicUUID = '8a7f1168-48af-4efb-83b5-e679f932ff00';
-
 
 // Global Variables for BLE
 let bleDevice = null;
 let bleServer = null;
-let sensorCharacteristic = null;
+let combinedCharacteristic = null;
 let batteryCharacteristic = null;
 let coCharacteristic = null;
 let buzzerCharacteristic = null;
@@ -79,23 +76,19 @@ disconnectButton.addEventListener('click', () => {
     }
 });
 
-// Handle Sensor Data
-function handleSensorData(event) {
-    let sensorValue = new TextDecoder().decode(event.target.value);
-    sensorDataContainer.textContent = sensorValue;
+// Handle BME680 Data
+function handleCombinedSensorData(event) {
+    let combinedValue = new TextDecoder().decode(event.target.value);
+    let [tempData, vocData] = combinedValue.split(', ');
+    sensorDataContainer.textContent = tempData;
+    let vocLevelContainer = document.getElementById('vocLevel');
+    vocLevelContainer.textContent = vocData;
 }
 
 // Handle CO Data
 function handleCOLevel(event) {
     let COValue = new TextDecoder().decode(event.target.value);
     coLevelContainer.textContent = COValue + ' PPM'; // This should update the CO level, not the battery level
-}
-
-
-// Handle VOC
-function handleVOCLevel(event) {
-    let vocValue = new TextDecoder().decode(event.target.value);
-    vocLevelContainer.textContent = vocValue + ' Ohm';
 }
 
 // Handle Battery Level
@@ -129,3 +122,52 @@ function writeBuzzerValue(value) {
             console.log('Error when writing value!', error);
         });
 }
+
+// Event Listeners
+connectButton.addEventListener('click', async () => {
+    try {
+        console.log('Requesting Bluetooth Device...');
+        bleDevice = await navigator.bluetooth.requestDevice({
+            filters: [{ services: [bleServiceUUID] }],
+        });
+
+        console.log('Connecting to GATT Server...');
+        bleServer = await bleDevice.gatt.connect();
+
+        console.log('Getting Service...');
+        const service = await bleServer.getPrimaryService(bleServiceUUID);
+
+        console.log('Getting Characteristics...');
+        combinedCharacteristic = await service.getCharacteristic(combinedCharacteristicUUID);
+        batteryCharacteristic = await service.getCharacteristic(batteryCharacteristicUUID);
+        coCharacteristic = await service.getCharacteristic(coCharacteristicUUID);
+        buzzerCharacteristic = await service.getCharacteristic(buzzerCharacteristicUUID);
+
+        bleStateContainer.innerHTML = 'Connected';
+        bleStateContainer.style.color = '#24af37';
+
+        await startNotifications(combinedCharacteristic, handleCombinedSensorData);
+        await startNotifications(batteryCharacteristic, handleBatteryLevel);
+        await startNotifications(coCharacteristic, handleCOLevel);
+    } catch (error) {
+        console.log('Argh! ' + error);
+    }
+});
+
+disconnectButton.addEventListener('click', () => {
+    if (!bleDevice) {
+        return;
+    }
+    console.log('Disconnecting from Bluetooth Device...');
+    if (bleDevice.gatt.connected) {
+        bleDevice.gatt.disconnect();
+        bleStateContainer.innerHTML = 'Disconnected';
+        bleStateContainer.style.color = '#d13a30';
+    } else {
+        console.log('> Bluetooth Device is already disconnected');
+    }
+});
+
+// Buzzer Control Buttons
+buzzerOnButton.addEventListener('click', () => writeBuzzerValue(1));
+buzzerOffButton.addEventListener('click', () => writeBuzzerValue(0));
