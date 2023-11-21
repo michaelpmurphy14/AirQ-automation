@@ -1,35 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>Air Quality Monitor</title>
-    <style>
-        body { font-family: Arial, sans-serif; }
-        #sensorData { margin-top: 20px; }
-        .button { margin-top: 10px; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <h1>Air Quality Monitor</h1>
-    <button id="connectButton">Connect</button>
-    <button id="disconnectButton" disabled>Disconnect</button>
+    <button id="connectBleButton">Connect to BLE Device</button>
+    <button id="disconnectBleButton" disabled>Disconnect BLE Device</button>
+    <p>BLE state: <strong><span id="bleState" style="color:#d13a30;">Disconnected</span></strong></p>
 
-    <div id="sensorData">
-        <p id="gasResistance">Gas Resistance: -</p>
-        <p id="batteryLevel">Battery Level: -</p>
-    </div>
+    <h2>Sensor Data</h2>
+    <p>Gas Resistance: <span id="gasResistance">-</span></p>
+    <p>Battery Level: <span id="batteryLevel">-</span></p>
 
-    <div>
-        <button class="button" id="ledRed">Red LED</button>
-        <button class="button" id="ledGreen">Green LED</button>
-        <button class="button" id="ledBlue">Blue LED</button>
-        <button class="button" id="ledOff">LED Off</button>
-    </div>
-
-    <div>
-        <button class="button" id="buzzerOn">Buzzer On</button>
-        <button class="button" id="buzzerOff">Buzzer Off</button>
-    </div>
+    <h2>Control</h2>
+    <button id="ledRed">Red LED</button>
+    <button id="ledGreen">Green LED</button>
+    <button id="ledBlue">Blue LED</button>
+    <button id="ledOff">LED Off</button>
+    <button id="buzzerOn">Buzzer On</button>
+    <button id="buzzerOff">Buzzer Off</button>
 
     <script src="app.js"></script>
 </body>
