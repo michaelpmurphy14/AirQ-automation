@@ -49,10 +49,10 @@ function isWebBluetoothEnabled() {
 }
 
 // Connect to BLE Device and Enable Notifications
-function connectToDevice() {
+function connectToDevice(){
     console.log('Initializing Bluetooth...');
     navigator.bluetooth.requestDevice({
-        filters: [{ name: deviceName }],
+        acceptAllDevices: true,
         optionalServices: [bleService]
     })
     .then(device => {
