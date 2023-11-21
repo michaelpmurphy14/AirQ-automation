@@ -20,6 +20,9 @@ let combinedSensorCharacteristic = null;
 let batteryCharacteristic = null;
 let coCharacteristic = null;
 
+// Initially, set the disconnect button to disabled
+disconnectButton.classList.add('disabled');
+
 // Connect to BLE Device
 connectButton.addEventListener('click', async () => {
     try {
@@ -42,10 +45,6 @@ connectButton.addEventListener('click', async () => {
         bleStateContainer.innerHTML = 'Connected';
         bleStateContainer.style.color = '#24af37';
 
-        // Enable/Disable buttons based on connection status
-        connectButton.disabled = true;
-        disconnectButton.disabled = false;
-
         // Start notifications if characteristics are valid
         if (combinedSensorCharacteristic) {
             await startNotifications(combinedSensorCharacteristic, handleCombinedSensorData);
@@ -56,10 +55,57 @@ connectButton.addEventListener('click', async () => {
         if (coCharacteristic) {
             await startNotifications(coCharacteristic, handleCOLevel);
         }
+
+        // Update button states
+        connectButton.classList.add('disabled');
+        disconnectButton.classList.remove('disabled');
     } catch (error) {
         console.log('Argh! ' + error);
     }
 });
+
+async function getCharacteristic(service, uuid) {
+    try {
+        const characteristic = await service.getCharacteristic(uuid);
+        console.log(`Characteristic ${uuid} found`, characteristic);
+        return characteristic;
+    } catch (error) {
+        console.error(`Error getting characteristic ${uuid}:`, error);
+        return null;
+    }
+}
+
+async function startNotifications(characteristic, handler) {
+    try {
+        characteristic.addEventListener('characteristicvaluechanged', handler);
+        await characteristic.startNotifications();
+        console.log(`Started notifications for ${characteristic.uuid}`);
+    } catch (error) {
+        console.error(`Error starting notifications for ${characteristic.uuid}:`, error);
+    }
+}
+
+function handleCombinedSensorData(event) {
+    let sensorValues = new TextDecoder().decode(event.target.value).split(',');
+    if (sensorValues.length >= 2) {
+        let temperature = sensorValues[0] + " °C";
+        let vocResistance = sensorValues[1] + " ohms";
+        temperatureDataContainer.textContent = temperature;
+        vocDataContainer.textContent = vocResistance;
+    } else {
+        console.log('Invalid sensor data received:', sensorValues);
+    }
+}
+
+function handleCOLevel(event) {
+    let coValue = new TextDecoder().decode(event.target.value);
+    coDataContainer.textContent = coValue + " ppm";
+}
+
+function handleBatteryLevel(event) {
+    let batteryValue = new TextDecoder().decode(event.target.value);
+    batteryLevelContainer.textContent = batteryValue + ' V';
+}
 
 // Disconnect from BLE Device
 disconnectButton.addEventListener('click', () => {
@@ -73,62 +119,10 @@ disconnectButton.addEventListener('click', () => {
         bleStateContainer.innerHTML = 'Disconnected';
         bleStateContainer.style.color = '#d13a30';
 
-        // Enable/Disable buttons based on connection status
-        connectButton.disabled = false;
-        disconnectButton.disabled = true;
+        // Update button states
+        connectButton.classList.remove('disabled');
+        disconnectButton.classList.add('disabled');
     } else {
         console.log('> Bluetooth Device is already disconnected');
     }
 });
-
-
-async function getCharacteristic(service, uuid) {
-    try {
-        const characteristic = await service.getCharacteristic(uuid);
-        console.log(`Characteristic ${uuid} found`, characteristic);
-        return characteristic;
-    } catch (error) {
-        console.error(`Error getting characteristic ${uuid}:`, error);
-        return null;
-    }
-}
-
-// Start Notifications
-async function startNotifications(characteristic, handler) {
-    try {
-        characteristic.addEventListener('characteristicvaluechanged', handler);
-        await characteristic.startNotifications();
-        console.log(`Started notifications for ${characteristic.uuid}`);
-    } catch (error) {
-        console.error(`Error starting notifications for ${characteristic.uuid}:`, error);
-    }
-}
-
-// Handle Combined Sensor Data (Temperature and VOC)
-function handleCombinedSensorData(event) {
-    let sensorValues = new TextDecoder().decode(event.target.value).split(',');
-    if (sensorValues.length >= 2) {
-        let temperature = sensorValues[0] + " °C";
-        let vocResistance = sensorValues[1] + " ohms";
-        temperatureDataContainer.textContent = temperature;
-        vocDataContainer.textContent = vocResistance;
-    } else {
-        console.log('Invalid sensor data received:', sensorValues);
-    }
-}
-
-// Handle CO Data
-function handleCOLevel(event) {
-    let coValue = new TextDecoder().decode(event.target.value);
-    coDataContainer.textContent = coValue + " ppm";
-}
-
-// Handle Battery Level
-function handleBatteryLevel(event) {
-    let batteryVoltage = parseFloat(new TextDecoder().decode(event.target.value));
-    let batteryPercent = ((batteryVoltage - 2.8) / 2.7) * 100;
-    batteryLevelContainer.textContent = 'Battery: ' + batteryPercent.toFixed(2) + '%';
-}
-
-
-
