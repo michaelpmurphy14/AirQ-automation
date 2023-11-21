@@ -61,8 +61,8 @@
     disconnectButton.addEventListener('click', disconnectDevice);
 
     // LED Button Event Listeners
-    ledOnButton.addEventListener('click', () => writeLedCharacteristic(1));
-    ledOffButton.addEventListener('click', () => writeLedCharacteristic(0));
+    ledOnButton.addEventListener('click', () => writeLedCharacteristic(255, 0, 0)); // Example: Turn LED Red
+    ledOffButton.addEventListener('click', () => writeLedCharacteristic(0, 0, 0)); // Turn LED Off
 
     // Buzzer Button Event Listeners
     buzzerOnButton.addEventListener('click', () => writeBuzzerCharacteristic(1));
@@ -151,19 +151,19 @@
         writeCharacteristic(buzzerCharacteristic, value);
     }
 
-    function writeCharacteristic(characteristicUuid, value){
+    function writeLedCharacteristic(red, green, blue){
         if (bleServer && bleServer.connected) {
-            bleServiceFound.getCharacteristic(characteristicUuid)
+            bleServiceFound.getCharacteristic(ledCharacteristic)
             .then(characteristic => {
-                console.log("Found characteristic: ", characteristic.uuid);
-                const data = new Uint8Array([value]);
+                console.log("Found the LED characteristic: ", characteristic.uuid);
+                const data = new Uint8Array([red, green, blue]);
                 return characteristic.writeValue(data);
             })
             .then(() => {
-                console.log("Value written to characteristic:", characteristicUuid, value);
+                console.log("RGB values written to LED characteristic:", red, green, blue);
             })
             .catch(error => {
-                console.error("Error writing to characteristic: ", error);
+                console.error("Error writing to the LED characteristic: ", error);
             });
         } else {
             console.error ("Bluetooth is not connected. Cannot write to characteristic.")
