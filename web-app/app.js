@@ -12,12 +12,14 @@ const bleServiceUUID = '19b10000-e8f2-537e-4f6c-d104768a1214';
 const sensorCharacteristicUUID = '19b10001-e8f2-537e-4f6c-d104768a1214';
 const batteryCharacteristicUUID = '19b10004-e8f2-537e-4f6c-d104768a1214';
 const buzzerCharacteristicUUID = '19b10003-e8f2-537e-4f6c-d104768a1214';
+const coCharacteristicUUID = 'de5941c4-8844-11ee-b9d1-0242ac120002';
 
 // Global Variables for BLE
 let bleDevice = null;
 let bleServer = null;
 let sensorCharacteristic = null;
 let batteryCharacteristic = null;
+let coCharacteristic = null;
 let buzzerCharacteristic = null;
 
 // Connect to BLE Device
@@ -38,6 +40,7 @@ connectButton.addEventListener('click', async () => {
         console.log('Getting Characteristics...');
         sensorCharacteristic = await service.getCharacteristic(sensorCharacteristicUUID);
         batteryCharacteristic = await service.getCharacteristic(batteryCharacteristicUUID);
+        coCharacteristic = await service.getCharacteristic(coCharacteristicUUID);
         buzzerCharacteristic = await service.getCharacteristic(buzzerCharacteristicUUID);
 
         bleStateContainer.innerHTML = 'Connected';
@@ -45,6 +48,7 @@ connectButton.addEventListener('click', async () => {
 
         await startNotifications(sensorCharacteristic, handleSensorData);
         await startNotifications(batteryCharacteristic, handleBatteryLevel);
+        await startNotifications(coCharacteristic, handleCOLevel);
     } catch (error) {
         console.log('Argh! ' + error);
     }
@@ -69,6 +73,12 @@ disconnectButton.addEventListener('click', () => {
 function handleSensorData(event) {
     let sensorValue = new TextDecoder().decode(event.target.value);
     sensorDataContainer.textContent = sensorValue;
+}
+
+// Handle CO Level
+function handleCOLevel(event) {
+    let COValue = new TextDecoder().decode(event.target.value);
+    batteryLevelContainer.textContent = COValue + ' PPM';
 }
 
 // Handle Battery Level
