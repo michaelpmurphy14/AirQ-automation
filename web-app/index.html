@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ESP32 BLE Control</title>
+    <title>ESP32 Web Bluetooth</title>
 </head>
 <body>
+    <h1>ESP32 Sensor Data and Control</h1>
     <button id="connect">Connect to ESP32</button>
-    <div>
-        <h3>Sensor Data:</h3>
-        <p id="sensorData">Not available</p>
-    </div>
-    <div>
-        <h3>Control LED:</h3>
-        <input type="color" id="ledColor">
-    </div>
-    <div>
-        <h3>Control Buzzer:</h3>
-        <button id="buzzerOn">Buzzer On</button>
-        <button id="buzzerOff">Buzzer Off</button>
-    </div>
-    <div>
-        <h3>Battery Level:</h3>
-        <p id="batteryLevel">Not available</p>
-    </div>
+    <button id="disconnect" disabled>Disconnect</button>
+    <h2>Sensor Data</h2>
+    <div id="sensorData">Waiting for data...</div>
+    <h2>Battery Data</h2>
+    <div id="batteryData">Waiting for battery data...</div>
+    <h2>Controls</h2>
+    <button id="toggleBuzzer">Toggle Buzzer</button>
+    <button id="setNeopixelRed">Set Neopixel Red</button>
+    <button id="setNeopixelGreen">Set Neopixel Green</button>
+    <button id="setNeopixelBlue">Set Neopixel Blue</button>
+    <button id="setNeopixelOff">Turn Neopixel Off</button>
+
+    <script src="app.js"></script>
 </body>
 </html>
