@@ -23,8 +23,7 @@
   <button id="buzzerOffButton">Buzzer OFF</button>
 
   <h2>Battery Level</h2>
-  <p>Battery Percentage: <span id="batteryLevel">0%</span></p>
-
+  <p>Battery Voltage: <span id="batteryLevel">0V</span></p>
 
 </body>
 <script>
@@ -107,32 +106,23 @@
         .then(characteristic => {
             console.log("Sensor Characteristic discovered:", characteristic.uuid);
             characteristic.addEventListener('characteristicvaluechanged', handleSensorCharacteristicChange);
-            characteristic.startNotifications();
-            console.log("Sensor Notifications Started.");
-            return characteristic.readValue();
-        })
-        .then(value => {
-            const sensorValue = new TextDecoder().decode(value);
-            sensorDataContainer.innerHTML = sensorValue;
+            return characteristic.startNotifications();
         })
         .then(() => {
+            console.log("Sensor Notifications Started.");
             return bleServiceFound.getCharacteristic(batteryCharacteristic);
         })
         .then(characteristic => {
             console.log("Battery Characteristic discovered:", characteristic.uuid);
             characteristic.addEventListener('characteristicvaluechanged', handleBatteryCharacteristicChange);
-            characteristic.startNotifications();
-            console.log("Battery Notifications Started.");
-            return characteristic.readValue();
+            return characteristic.startNotifications();
         })
-        .then(value => {
-            const batteryVoltage = parseFloat(new TextDecoder().decode(value));
-            const batteryPercentage = calculateBatteryPercentage(batteryVoltage);
-            batteryLevelContainer.innerHTML = batteryPercentage + '%';
+        .then(() => {
+            console.log("Battery Notifications Started.");
         })
         .catch(error => {
             console.log('Error: ', error);
-        });
+        })
     }
 
     function onDisconnected(event){
@@ -149,9 +139,8 @@
     }
 
     function handleBatteryCharacteristicChange(event){
-        const batteryVoltage = parseFloat(new TextDecoder().decode(event.target.value));
-        const batteryPercentage = calculateBatteryPercentage(batteryVoltage);
-        batteryLevelContainer.innerHTML = batteryPercentage + '%';
+        const batteryVoltage = new TextDecoder().decode(event.target.value);
+        batteryLevelContainer.innerHTML = batteryVoltage + 'V';
     }
 
     function writeLedCharacteristic(value){
@@ -198,14 +187,6 @@
             console.error("Bluetooth is not connected.");
             window.alert("Bluetooth is not connected.")
         }
-    }
-
-    function calculateBatteryPercentage(voltage) {
-        // Adjust these values based on your battery's characteristics
-        const maxVoltage = 4.2; // Maximum voltage of the battery
-        const minVoltage = 3.0; // Minimum voltage before the device turns off
-        const percentage = (voltage - minVoltage) / (maxVoltage - minVoltage) * 100;
-        return Math.min(Math.max(percentage, 0), 100).toFixed(0); // Clamps the value between 0% and 100%
     }
 </script>
 
