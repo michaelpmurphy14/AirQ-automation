@@ -1,8 +1,8 @@
 // DOM Elements
 const connectButton = document.getElementById('connectBleButton');
 const disconnectButton = document.getElementById('disconnectBleButton');
-const buzzerOnButton = document.getElementById('buzzerOnButton');
-const buzzerOffButton = document.getElementById('buzzerOffButton');
+//const buzzerOnButton = document.getElementById('buzzerOnButton');
+//const buzzerOffButton = document.getElementById('buzzerOffButton');
 const temperatureDataContainer = document.getElementById('temperatureData');
 const coDataContainer = document.getElementById('coData');
 const vocDataContainer = document.getElementById('vocData');
@@ -13,7 +13,7 @@ const bleStateContainer = document.getElementById('bleState');
 const bleServiceUUID = '19b10000-e8f2-537e-4f6c-d104768a1214';
 const combinedSensorCharacteristicUUID = '19b10005-e8f2-537e-4f6c-d104768a1214';
 const batteryCharacteristicUUID = '19b10004-e8f2-537e-4f6c-d104768a1214';
-const buzzerCharacteristicUUID = '19b10003-e8f2-537e-4f6c-d104768a1214';
+//const buzzerCharacteristicUUID = '19b10003-e8f2-537e-4f6c-d104768a1214';
 const coCharacteristicUUID = '6e400002-b5a3-f393-e0a9-e50e24dcca9e';
 
 // Global Variables for BLE
@@ -22,9 +22,8 @@ let bleServer = null;
 let combinedSensorCharacteristic = null;
 let batteryCharacteristic = null;
 let coCharacteristic = null;
-let buzzerCharacteristic = null;
+//let buzzerCharacteristic = null;
 
-// Connect to BLE Device
 // Connect to BLE Device
 connectButton.addEventListener('click', async () => {
     try {
@@ -43,7 +42,7 @@ connectButton.addEventListener('click', async () => {
         combinedSensorCharacteristic = await getCharacteristic(service, combinedSensorCharacteristicUUID);
         batteryCharacteristic = await getCharacteristic(service, batteryCharacteristicUUID);
         coCharacteristic = await getCharacteristic(service, coCharacteristicUUID);
-        buzzerCharacteristic = await getCharacteristic(service, buzzerCharacteristicUUID);
+        //buzzerCharacteristic = await getCharacteristic(service, buzzerCharacteristicUUID);
 
         bleStateContainer.innerHTML = 'Connected';
         bleStateContainer.style.color = '#24af37';
@@ -111,24 +110,24 @@ function handleBatteryLevel(event) {
 }
 
 // Control Buzzer
-buzzerOnButton.addEventListener('click', () => writeBuzzerValue(1));
-buzzerOffButton.addEventListener('click', () => writeBuzzerValue(0));
+//buzzerOnButton.addEventListener('click', () => writeBuzzerValue(1));
+//buzzerOffButton.addEventListener('click', () => writeBuzzerValue(0));
 
 // Write Buzzer Value
-function writeBuzzerValue(value) {
-    if (!buzzerCharacteristic) {
-        console.log('Buzzer Characteristic is not found!');
-        return;
-    }
-    let data = new Uint8Array([value]);
-    buzzerCharacteristic.writeValue(data)
-        .then(() => {
-            console.log(`Buzzer value ${value} written`);
-        })
-        .catch(error => {
-            console.log('Error when writing value!', error);
-        });
-}
+//function writeBuzzerValue(value) {
+//    if (!buzzerCharacteristic) {
+//        console.log('Buzzer Characteristic is not found!');
+//        return;
+//    }
+//    let data = new Uint8Array([value]);
+//    buzzerCharacteristic.writeValue(data)
+//        .then(() => {
+//            console.log(`Buzzer value ${value} written`);
+//        })
+//        .catch(error => {
+//            console.log('Error when writing value!', error);
+//        });
+//}
 
 // Disconnect from BLE Device
 disconnectButton.addEventListener('click', () => {
