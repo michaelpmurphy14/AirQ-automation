@@ -75,8 +75,8 @@ function handleCombinedSensorData(event) {
     let combinedData = new TextDecoder().decode(event.target.value);
     if (combinedData) {
         let dataParts = combinedData.split(","); // Assuming data is comma-separated
-        temperatureDataContainer.textContent = dataParts[0] + ' °C';
-        vocDataContainer.textContent = dataParts[1] + ' Ohm';
+        temperatureDataContainer.textContent = dataParts[0];
+        vocDataContainer.textContent = dataParts[1];
     } else {
         console.log("Received undefined combined sensor data");
     }
@@ -85,7 +85,7 @@ function handleCombinedSensorData(event) {
 // Handle CO Data
 function handleCOData(event) {
     let coValue = new TextDecoder().decode(event.target.value);
-    coDataContainer.textContent = coValue + ' PPM';
+    coDataContainer.textContent = coValue;
 }
 
 // Handle Battery Level
