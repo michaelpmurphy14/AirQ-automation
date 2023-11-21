@@ -5,6 +5,7 @@ const buzzerOnButton = document.getElementById('buzzerOnButton');
 const buzzerOffButton = document.getElementById('buzzerOffButton');
 const sensorDataContainer = document.getElementById('sensorData');
 const batteryLevelContainer = document.getElementById('batteryLevel');
+const coLevelContainer = document.getElementById('coData');
 const bleStateContainer = document.getElementById('bleState');
 
 // BLE Service and Characteristic UUIDs
