@@ -3,42 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Air Quality Dashboard</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Air Quality Monitor</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container mt-4">
-        <h1 class="text-center mb-4">Air Quality Dashboard</h1>
-        <div class="row">
-            <div class="col-md-6 mb-3">
-                <h2>CO Data</h2>
-                <div id="coData" class="data-display">N/A</div>
+    <div class="container">
+        <header>
+            <h1>Air Quality Dashboard</h1>
+            <button id="connectBleButton">Connect Bluetooth</button>
+            <button id="disconnectBleButton" disabled>Disconnect Bluetooth</button>
+        </header>
+        <section id="dataDisplay">
+            <div id="coData" class="data-box">
+                <h2>CO Level</h2>
+                <p>N/A ppm</p>
             </div>
-            <div class="col-md-6 mb-3">
-                <h2>VOC Data</h2>
-                <div id="vocData" class="data-display">N/A</div>
+            <div id="vocData" class="data-box">
+                <h2>VOC Level</h2>
+                <p>N/A ohms</p>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 mb-3">
+            <div id="temperatureData" class="data-box">
                 <h2>Temperature</h2>
-                <div id="temperatureData" class="data-display">N/A</div>
+                <p>N/A °C</p>
             </div>
-            <div class="col-md-6 mb-3">
+            <div id="batteryLevel" class="data-box">
                 <h2>Battery Level</h2>
-                <div id="batteryLevel" class="data-display">N/A</div>
+                <p>N/A %</p>
             </div>
-        </div>
-        <div class="row">
-            <div class="col text-center">
-                <button id="connectBleButton" class="btn btn-primary">Connect</button>
-                <button id="disconnectBleButton" class="btn btn-secondary">Disconnect</button>
-            </div>
-        </div>
+        </section>
+        <footer>
+            <p id="bleState">Disconnected</p>
+        </footer>
     </div>
-
-    <!-- Your existing JavaScript files -->
     <script src="app.js"></script>
 </body>
 </html>
