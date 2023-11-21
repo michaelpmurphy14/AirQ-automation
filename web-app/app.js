@@ -14,8 +14,8 @@ const bleServiceUUID = '19b10000-e8f2-537e-4f6c-d104768a1214';
 const sensorCharacteristicUUID = '19b10001-e8f2-537e-4f6c-d104768a1214';
 const batteryCharacteristicUUID = '19b10004-e8f2-537e-4f6c-d104768a1214';
 const buzzerCharacteristicUUID = '19b10003-e8f2-537e-4f6c-d104768a1214';
-const coCharacteristicUUID = '7bdde790-1e7e-4f7b-9835-78b323b5315d';
-const vocCharacteristicUUID = 'yf9b86e74-3f53-427b-8d91-1023115eb99d';
+const coCharacteristicUUID = '6e400002-b5a3-f393-e0a9-e50e24dcca9e';
+const vocCharacteristicUUID = '8a7f1168-48af-4efb-83b5-e679f932ff00';
 
 
 // Global Variables for BLE
