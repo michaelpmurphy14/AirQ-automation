@@ -31,8 +31,13 @@ connectButton.addEventListener('click', async () => {
     try {
         console.log('Requesting Bluetooth Device...');
         bleDevice = await navigator.bluetooth.requestDevice({
-            acceptAllDevices: true,
-            optionalServices: [bleServiceUUID]
+            // Use filters to specify the devices to be shown
+            filters: [
+                { services: [bleServiceUUID] }, // Filter by service UUID
+                // { name: 'YourDeviceName' }, // Uncomment and replace with your device's name to filter by device name
+                // { namePrefix: 'Prefix' } // Uncomment and replace with the prefix of your device's name to filter by name prefix
+            ],
+            // optionalServices: [bleServiceUUID] // Include this if you need to access other optional services
         });
 
         console.log('Connecting to GATT Server...');
