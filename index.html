@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Arduino Bluetooth Control</title>
+    <title>ESP32 BLE Control</title>
 </head>
 <body>
-    <h1>Arduino Bluetooth Control Panel</h1>
-    <button id="connect">Connect to Bluetooth</button>
-    <button id="disconnect" disabled>Disconnect</button>
-    <h2>Sensor Data</h2>
-    <div id="sensorData">Waiting for data...</div>
-    <h2>Controls</h2>
-    <button id="ledRed">Red LED</button>
-    <button id="ledGreen">Green LED</button>
-    <button id="ledBlue">Blue LED</button>
-    <button id="ledOff">LED Off</button>
-    <button id="buzzerOn">Buzzer On</button>
-    <button id="buzzerOff">Buzzer Off</button>
-    <script src="app.js"></script>
+    <button id="connect">Connect to ESP32</button>
+    <div>
+        <h3>Sensor Data:</h3>
+        <p id="sensorData">Not available</p>
+    </div>
+    <div>
+        <h3>Control LED:</h3>
+        <input type="color" id="ledColor">
+    </div>
+    <div>
+        <h3>Control Buzzer:</h3>
+        <button id="buzzerOn">Buzzer On</button>
+        <button id="buzzerOff">Buzzer Off</button>
+    </div>
+    <div>
+        <h3>Battery Level:</h3>
+        <p id="batteryLevel">Not available</p>
+    </div>
 </body>
 </html>
