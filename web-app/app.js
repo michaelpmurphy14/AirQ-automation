@@ -1,95 +1,123 @@
-let esp32Device;
+let myDevice;
 let sensorCharacteristic;
-let batteryCharacteristic;
 let ledCharacteristic;
 let buzzerCharacteristic;
+let batteryCharacteristic;
 
-document.getElementById('connect').addEventListener('click', () => {
-    connectToESP32();
+document.getElementById('connectButton').addEventListener('click', () => {
+    connect();
 });
 
-document.getElementById('disconnect').addEventListener('click', () => {
-    disconnectFromESP32();
+document.getElementById('disconnectButton').addEventListener('click', () => {
+    disconnect();
 });
 
-document.getElementById('toggleBuzzer').addEventListener('click', () => {
-    toggleBuzzer();
+document.getElementById('ledRed').addEventListener('click', () => {
+    sendLedColor(0xFF0000); // Red
 });
 
-document.getElementById('setNeopixelRed').addEventListener('click', () => {
-    setNeopixelColor(0xFF0000); // Red
+document.getElementById('ledGreen').addEventListener('click', () => {
+    sendLedColor(0x00FF00); // Green
 });
 
-document.getElementById('setNeopixelGreen').addEventListener('click', () => {
-    setNeopixelColor(0x00FF00); // Green
+document.getElementById('ledBlue').addEventListener('click', () => {
+    sendLedColor(0x0000FF); // Blue
 });
 
-document.getElementById('setNeopixelBlue').addEventListener('click', () => {
-    setNeopixelColor(0x0000FF); // Blue
+document.getElementById('ledOff').addEventListener('click', () => {
+    sendLedColor(0x000000); // Off
 });
 
-document.getElementById('setNeopixelOff').addEventListener('click', () => {
-    setNeopixelColor(0x000000); // Off
+document.getElementById('buzzerOn').addEventListener('click', () => {
+    sendBuzzerState(true);
 });
 
-async function connectToESP32() {
+document.getElementById('buzzerOff').addEventListener('click', () => {
+    sendBuzzerState(false);
+});
+
+async function connect() {
     try {
-        const options = {
-            filters: [{ namePrefix: 'ESP32' }],
-            optionalServices: ['19b10000-e8f2-537e-4f6c-d104768a1214']
-        };
+        const serviceUuid = '19b10000-e8f2-537e-4f6c-d104768a1214';
+        const sensorCharacteristicUuid = '19b10001-e8f2-537e-4f6c-d104768a1214';
+        const ledCharacteristicUuid = '19b10002-e8f2-537e-4f6c-d104768a1214';
+        const buzzerCharacteristicUuid = '19b10003-e8f2-537e-4f6c-d104768a1214';
+        const batteryCharacteristicUuid = '19b10004-e8f2-537e-4f6c-d104768a1214';
 
         console.log('Requesting Bluetooth Device...');
-        esp32Device = await navigator.bluetooth.requestDevice(options);
-        const server = await esp32Device.gatt.connect();
-        const service = await server.getPrimaryService('19b10000-e8f2-537e-4f6c-d104768a1214');
-
-        sensorCharacteristic = await service.getCharacteristic('19b10001-e8f2-537e-4f6c-d104768a1214');
-        batteryCharacteristic = await service.getCharacteristic('19b10004-e8f2-537e-4f6c-d104768a1214');
-        ledCharacteristic = await service.getCharacteristic('19b10002-e8f2-537e-4f6c-d104768a1214');
-        buzzerCharacteristic = await service.getCharacteristic('19b10003-e8f2-537e-4f6c-d104768a1214');
-
-        sensorCharacteristic.startNotifications().then(() => {
-            sensorCharacteristic.addEventListener('characteristicvaluechanged', handleSensorData);
+        myDevice = await navigator.bluetooth.requestDevice({
+            filters: [{ services: [serviceUuid] }]
         });
 
-        batteryCharacteristic.startNotifications().then(() => {
-            batteryCharacteristic.addEventListener('characteristicvaluechanged', handleBatteryData);
-        });
+        console.log('Connecting to GATT Server...');
+        const server = await myDevice.gatt.connect();
 
-        document.getElementById('connect').disabled = true;
-        document.getElementById('disconnect').disabled = false;
+        console.log('Getting Service...');
+        const service = await server.getPrimaryService(serviceUuid);
 
-        console.log('Connected to ESP32');
+        console.log('Getting Characteristics...');
+        sensorCharacteristic = await service.getCharacteristic(sensorCharacteristicUuid);
+        ledCharacteristic = await service.getCharacteristic(ledCharacteristicUuid);
+        buzzerCharacteristic = await service.getCharacteristic(buzzerCharacteristicUuid);
+        batteryCharacteristic = await service.getCharacteristic(batteryCharacteristicUuid);
+
+        await sensorCharacteristic.startNotifications();
+        sensorCharacteristic.addEventListener('characteristicvaluechanged', handleSensorData);
+
+        await batteryCharacteristic.startNotifications();
+        batteryCharacteristic.addEventListener('characteristicvaluechanged', handleBatteryData);
+
+        document.getElementById('connectButton').disabled = true;
+        document.getElementById('disconnectButton').disabled = false;
     } catch (error) {
-        console.log('Error: ' + error);
+        console.log('Argh! ' + error);
     }
 }
 
-function disconnectFromESP32() {
-    if (!esp32Device) return;
-
-    esp32Device.gatt.disconnect();
-    document.getElementById('connect').disabled = false;
-    document.getElementById('disconnect').disabled = true;
-    console.log('Disconnected from ESP32');
+function disconnect() {
+    if (!myDevice) {
+        return;
+    }
+    console.log('Disconnecting from Bluetooth Device...');
+    if (myDevice.gatt.connected) {
+        myDevice.gatt.disconnect();
+        document.getElementById('connectButton').disabled = false;
+        document.getElementById('disconnectButton').disabled = true;
+    } else {
+        console.log('> Bluetooth Device is already disconnected');
+    }
 }
 
 function handleSensorData(event) {
-    const sensorData = new TextDecoder().decode(event.target.value);
-    document.getElementById('sensorData').textContent = sensorData;
+    let data = event.target.value;
+    let decoder = new TextDecoder('utf-8');
+    let sensorData = decoder.decode(data);
+
+    // Assuming the sensor data is comma-separated
+    let parts = sensorData.split(',');
+    document.getElementById('gasResistance').textContent = parts[0];
 }
 
 function handleBatteryData(event) {
-    const batteryData = new TextDecoder().decode(event.target.value);
-    document.getElementById('batteryData').textContent = 'Battery Voltage: ' + batteryData + ' V';
+    let data = event.target.value;
+    let batteryLevel = data.getUint8(0);
+    document.getElementById('batteryLevel').textContent = `Battery Level: ${batteryLevel}%`;
 }
 
-async function toggleBuzzer() {
-    if (!buzzerCharacteristic) return;
-    const value = new Uint8Array([1]);
-    await buzzerCharacteristic.writeValue(value);
+function sendLedColor(color) {
+    if (!ledCharacteristic) {
+        return;
+    }
+    let buffer = new Uint32Array([color]);
+    ledCharacteristic.writeValue(buffer);
 }
 
-async function setNeopixelColor(color) {
-    if
+function sendBuzzerState(state) {
+    if (!buzzerCharacteristic) {
+        return;
+    }
+    let buffer = new Uint8Array([state ? 1 : 0]);
+    buzzerCharacteristic.writeValue(buffer);
+}
+
+console.log('Page loaded');
