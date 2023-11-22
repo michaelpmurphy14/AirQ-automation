@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    background: linear-gradient(to right, #f1f1f1, #a5d8dd);
     color: white;
 }
 
@@ -29,7 +29,7 @@ h1 {
 .button-container button {
     margin: 10px;
     padding: 10px 20px;
-    font-size: 1em;
+    font-size: 2em;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -53,12 +53,12 @@ h1 {
     padding: 20px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-#temperatureData { background-color: rgba(255, 99, 71, 0.5); }
-#coData { background-color: rgba(60, 179, 113, 0.5); }
-#vocData { background-color: rgba(30, 144, 255, 0.5); }
+#temperatureData { background-color: rgba(189, 195, 199, 0.5); }
+#coData { background-color: rgba(243, 156, 18, 0.5); }
+#vocData { background-color: rgba(44, 62, 80, 0.5); }
 
 footer {
     text-align: center;
