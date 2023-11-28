@@ -2,12 +2,12 @@
 const connectButton = document.getElementById('connectBleButton');
 const disconnectButton = document.getElementById('disconnectBleButton');
 const temperatureDataContainer = document.getElementById('temperatureData');
-const humidityDataContainer = document.getElementById('humidityData'); // Ensure this exists in your HTML
-const pressureDataContainer = document.getElementById('pressureData'); // Ensure this exists in your HTML
-const iaqDataContainer = document.getElementById('iaqData'); // Ensure this exists in your HTML
-const staticIaqDataContainer = document.getElementById('staticIaqData'); // Ensure this exists in your HTML
-const co2DataContainer = document.getElementById('co2Data'); // Ensure this exists in your HTML
-const vocDataContainer = document.getElementById('vocData'); // Ensure this exists in your HTML
+const humidityDataContainer = document.getElementById('humidityData');
+const pressureDataContainer = document.getElementById('pressureData');
+const iaqDataContainer = document.getElementById('iaqData');
+const staticIaqDataContainer = document.getElementById('staticIaqData');
+const co2DataContainer = document.getElementById('co2Data');
+const vocDataContainer = document.getElementById('vocData');
 const coDataContainer = document.getElementById('coData');
 const batteryLevelContainer = document.getElementById('batteryLevel');
 const bleStateContainer = document.getElementById('bleState');
@@ -61,7 +61,6 @@ connectButton.addEventListener('click', async () => {
             await startNotifications(coCharacteristic, handleCOLevel);
         }
 
-        // Update button states
         connectButton.classList.add('disabled');
         disconnectButton.classList.remove('disabled');
     } catch (error) {
@@ -91,6 +90,7 @@ async function reconnect() {
         console.log('Reconnect failed:', error);
     }
 }
+
 async function getCharacteristic(service, uuid) {
     try {
         const characteristic = await service.getCharacteristic(uuid);
@@ -112,7 +112,6 @@ async function startNotifications(characteristic, handler) {
     }
 }
 
-
 function handleCombinedSensorData(event) {
     let sensorValues = new TextDecoder().decode(event.target.value).split(',');
     if (sensorValues.length >= 7) {
@@ -127,7 +126,6 @@ function handleCombinedSensorData(event) {
         console.log('Invalid sensor data received:', sensorValues);
     }
 }
-
 
 function handleCOLevel(event) {
     let coValue = new TextDecoder().decode(event.target.value);
@@ -154,7 +152,6 @@ disconnectButton.addEventListener('click', () => {
         bleStateContainer.innerHTML = 'Disconnected';
         bleStateContainer.style.color = '#d13a30';
 
-        // Update button states
         connectButton.classList.remove('disabled');
         disconnectButton.classList.add('disabled');
     } else {
