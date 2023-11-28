@@ -2,8 +2,13 @@
 const connectButton = document.getElementById('connectBleButton');
 const disconnectButton = document.getElementById('disconnectBleButton');
 const temperatureDataContainer = document.getElementById('temperatureData');
+const humidityDataContainer = document.getElementById('humidityData'); // Ensure this exists in your HTML
+const pressureDataContainer = document.getElementById('pressureData'); // Ensure this exists in your HTML
+const iaqDataContainer = document.getElementById('iaqData'); // Ensure this exists in your HTML
+const staticIaqDataContainer = document.getElementById('staticIaqData'); // Ensure this exists in your HTML
+const co2DataContainer = document.getElementById('co2Data'); // Ensure this exists in your HTML
+const vocDataContainer = document.getElementById('vocData'); // Ensure this exists in your HTML
 const coDataContainer = document.getElementById('coData');
-const vocDataContainer = document.getElementById('vocData');
 const batteryLevelContainer = document.getElementById('batteryLevel');
 const bleStateContainer = document.getElementById('bleState');
 
@@ -89,21 +94,13 @@ async function startNotifications(characteristic, handler) {
 function handleCombinedSensorData(event) {
     let sensorValues = new TextDecoder().decode(event.target.value).split(',');
     if (sensorValues.length >= 7) {
-        let temperature = sensorValues[0] + " °C";
-        let humidity = sensorValues[1] + " %";
-        let pressure = sensorValues[2] + " hPa";
-        let iaq = sensorValues[3];
-        let staticIaq = sensorValues[4];
-        let co2Equivalent = sensorValues[5] + " ppm";
-        let breathVocEquivalent = sensorValues[6] + " ppm";
-
-        temperatureDataContainer.textContent = "Temperature: " + temperature;
-        humidityDataContainer.textContent = "Humidity: " + humidity;
-        pressureDataContainer.textContent = "Pressure: " + pressure;
-        iaqDataContainer.textContent = "IAQ: " + iaq;
-        staticIaqDataContainer.textContent = "Static IAQ: " + staticIaq;
-        co2DataContainer.textContent = "CO2 Equivalent: " + co2Equivalent;
-        vocDataContainer.textContent = "Breath VOC Equivalent: " + breathVocEquivalent;
+        temperatureDataContainer.textContent = "Temperature: " + sensorValues[0] + " °C";
+        humidityDataContainer.textContent = "Humidity: " + sensorValues[1] + " %";
+        pressureDataContainer.textContent = "Pressure: " + sensorValues[2] + " hPa";
+        iaqDataContainer.textContent = "IAQ: " + sensorValues[3];
+        staticIaqDataContainer.textContent = "Static IAQ: " + sensorValues[4];
+        co2DataContainer.textContent = "CO2 Equivalent: " + sensorValues[5] + " ppm";
+        vocDataContainer.textContent = "Breath VOC Equivalent: " + sensorValues[6] + " ppm";
     } else {
         console.log('Invalid sensor data received:', sensorValues);
     }
