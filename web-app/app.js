@@ -71,6 +71,26 @@ connectButton.addEventListener('click', async () => {
     }
 });
 
+bleDevice.addEventListener('gattserverdisconnected', onDisconnected);
+
+function onDisconnected() {
+    console.log('Device disconnected');
+    reconnect();
+}
+
+async function reconnect() {
+    if (!bleDevice) {
+        return;
+    }
+    try {
+        console.log('Reconnecting...');
+        await bleDevice.gatt.connect();
+        // Reinitialize services and characteristics
+        // ... code to reinitialize services and characteristics ...
+    } catch (error) {
+        console.log('Reconnect failed:', error);
+    }
+}
 async function getCharacteristic(service, uuid) {
     try {
         const characteristic = await service.getCharacteristic(uuid);
