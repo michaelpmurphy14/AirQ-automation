@@ -85,17 +85,30 @@ async function startNotifications(characteristic, handler) {
     }
 }
 
+
 function handleCombinedSensorData(event) {
     let sensorValues = new TextDecoder().decode(event.target.value).split(',');
-    if (sensorValues.length >= 2) {
+    if (sensorValues.length >= 7) {
         let temperature = sensorValues[0] + " °C";
-        let vocResistance = sensorValues[1] + " ohms";
-        temperatureDataContainer.textContent = temperature;
-        vocDataContainer.textContent = vocResistance;
+        let humidity = sensorValues[1] + " %";
+        let pressure = sensorValues[2] + " hPa";
+        let iaq = sensorValues[3];
+        let staticIaq = sensorValues[4];
+        let co2Equivalent = sensorValues[5] + " ppm";
+        let breathVocEquivalent = sensorValues[6] + " ppm";
+
+        temperatureDataContainer.textContent = "Temperature: " + temperature;
+        humidityDataContainer.textContent = "Humidity: " + humidity;
+        pressureDataContainer.textContent = "Pressure: " + pressure;
+        iaqDataContainer.textContent = "IAQ: " + iaq;
+        staticIaqDataContainer.textContent = "Static IAQ: " + staticIaq;
+        co2DataContainer.textContent = "CO2 Equivalent: " + co2Equivalent;
+        vocDataContainer.textContent = "Breath VOC Equivalent: " + breathVocEquivalent;
     } else {
         console.log('Invalid sensor data received:', sensorValues);
     }
 }
+
 
 function handleCOLevel(event) {
     let coValue = new TextDecoder().decode(event.target.value);
