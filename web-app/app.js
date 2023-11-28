@@ -102,15 +102,70 @@ async function getCharacteristic(service, uuid) {
     }
 }
 
-async function startNotifications(characteristic, handler) {
+async function startNotifications(characteristic) {
     try {
-        characteristic.addEventListener('characteristicvaluechanged', handler);
-        await characteristic.startNotifications();
-        console.log(`Started notifications for ${characteristic.uuid}`);
+        if (characteristic.properties.notify) {
+            await characteristic.startNotifications();
+            console.log(`Started notifications for ${characteristic.uuid}`);
+            characteristic.addEventListener('characteristicvaluechanged', handleCharacteristicValueChanged);
+        } else {
+            console.log(`Notifications not supported for ${characteristic.uuid}`);
+        }
     } catch (error) {
         console.error(`Error starting notifications for ${characteristic.uuid}:`, error);
     }
 }
+
+function handleCharacteristicValueChanged(event) {
+    let characteristic = event.target;
+    console.log(`Notification from ${characteristic.uuid}: `, event.target.value);
+
+    // Decode the data from the characteristic
+    let value = new TextDecoder().decode(event.target.value);
+
+    // Process the data based on the characteristic UUID
+    switch (characteristic.uuid) {
+        case '19b10005-e8f2-537e-4f6c-d104768a1214': // Combined Sensor Characteristic
+            processCombinedSensorData(value);
+            break;
+        case '19b10004-e8f2-537e-4f6c-d104768a1214': // Battery Characteristic
+            processBatteryData(value);
+            break;
+        case '6e400002-b5a3-f393-e0a9-e50e24dcca9e': // CO Characteristic
+            processCOData(value);
+            break;
+        default:
+            console.log('Unknown characteristic UUID:', characteristic.uuid);
+    }
+}
+
+function processCombinedSensorData(data) {
+    let sensorValues = data.split(',');
+    if (sensorValues.length >= 7) {
+        temperatureDataContainer.textContent = "Temperature: " + sensorValues[0] + " °C";
+        humidityDataContainer.textContent = "Humidity: " + sensorValues[1] + " %";
+        pressureDataContainer.textContent = "Pressure: " + sensorValues[2] + " hPa";
+        iaqDataContainer.textContent = "IAQ: " + sensorValues[3];
+        staticIaqDataContainer.textContent = "Static IAQ: " + sensorValues[4];
+        co2DataContainer.textContent = "CO2 Equivalent: " + sensorValues[5] + " ppm";
+        vocDataContainer.textContent = "Breath VOC Equivalent: " + sensorValues[6] + " ppm";
+    } else {
+        console.log('Invalid sensor data received:', sensorValues);
+    }
+}
+
+function processBatteryData(data) {
+    let batteryLevel = parseFloat(data);
+    batteryLevelContainer.textContent = 'Battery: ' + batteryLevel.toFixed(2) + '%';
+}
+
+function processCOData(data) {
+    let coLevel = parseFloat(data);
+    coDataContainer.textContent = 'CO Level: ' + coLevel.toFixed(2) + ' ppm';
+}
+function handleCharacteristicValueChanged(event) {
+    let characteristic = event.target;
+    console.log(`Notification from ${characteristic.uuid}: `, event.target.value);
 
 function handleCombinedSensorData(event) {
     let sensorValues = new TextDecoder().decode(event.target.value).split(',');
