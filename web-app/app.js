@@ -36,7 +36,7 @@ connectButton.addEventListener('click', async () => {
             filters: [{ services: [bleServiceUUID] }],
         });
 
-        console.log('Connecting to GATT Server...');
+        console.log(`Connecting to GATT Server of ${bleDevice.name}...`);
         bleServer = await bleDevice.gatt.connect();
 
         console.log('Getting Service...');
@@ -65,7 +65,9 @@ connectButton.addEventListener('click', async () => {
         connectButton.classList.add('disabled');
         disconnectButton.classList.remove('disabled');
     } catch (error) {
-        console.log('Argh! ' + error);
+        console.error('Connection failed:', error);
+        bleStateContainer.innerHTML = 'Connection Failed';
+        bleStateContainer.style.color = '#d13a30';
     }
 });
 
@@ -128,6 +130,7 @@ disconnectButton.addEventListener('click', () => {
     console.log('Disconnecting from Bluetooth Device...');
     if (bleDevice.gatt.connected) {
         bleDevice.gatt.disconnect();
+        console.log('Disconnected successfully.');
         bleStateContainer.innerHTML = 'Disconnected';
         bleStateContainer.style.color = '#d13a30';
 
