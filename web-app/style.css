@@ -3,18 +3,25 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header, footer {
+    background-color: #fff;
+    padding: 10px;
+    width: 100%;
     text-align: center;
-    padding: 10px 0;
-    background-color: #333;
-    color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
-    text-align: center;
 }
 
 .button-container {
@@ -23,50 +30,53 @@ main {
 
 .data-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
 }
 
 .data-box {
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    font-size: 24px;
-    color: #333;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    font-size: 1.2em;
 }
 
-.data-box small {
-    display: block;
-    font-size: 14px;
+.data-box > div {
+    font-size: 0.8em;
     color: #666;
-    margin-top: 5px;
 }
 
 .status {
-    font-size: 16px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+#bleState {
+    margin-top: 10px;
 }
 
 button {
-    padding: 10px 15px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
     background-color: #007bff;
     color: white;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 button.disabled {
     background-color: #ccc;
-    cursor: not-allowed;
+    cursor: default;
 }
 
 button:hover:not(.disabled) {
     background-color: #0056b3;
 }
 
-footer p {
-    margin: 0;
+footer {
+    color: #666;
+    font-size: 0.8em;
 }
